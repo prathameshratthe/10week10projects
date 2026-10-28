@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "text": "Dear consumer your electricity power will be disconnected at 9:30 pm tonight from electricity office because your previous month bill was not updated. Please immediately contact our electricity officer 9821039481.",
+    "ground_truth": "SCAM",
+    "category": "Electricity Bill Disconnection Fraud"
+  },
+  {
+    "id": 2,
+    "text": "SBI Alert: Dear customer your YONO account has been blocked today due to pending PAN card verification. Please click here https://sbi-kyc-update.xyz/login to update immediately to avoid permanent deactivation.",
+    "ground_truth": "SCAM",
+    "category": "Bank KYC & Pan Card Phishing"
+  },
+  {
+    "id": 3,
+    "text": "Congratulations! You have received a cashback reward of Rs. 4,999 in your PhonePe account. Click here to claim your prize in bank account: https://phonepe-cashback.top/claim. Enter UPI PIN to receive money.",
+    "ground_truth": "SCAM",
+    "category": "UPI Reverse Collect / Fake Cashback"
+  },
+  {
+    "id": 4,
+    "text": "URGENT NOTICE: Download our official power billing app http://bit.ly/mseb-ebill-update.apk to verify your pending dues and avoid disconnect.",
+    "ground_truth": "SCAM",
+    "category": "Malicious APK File Download"
+  },
+  {
+    "id": 5,
+    "text": "Earn Rs 3000 to Rs 8000 daily by simply liking YouTube videos and rating hotels on Google. No experience required. Daily payout. Contact our HR on Telegram: https://t.me/GlobalRecruit88",
+    "ground_truth": "SCAM",
+    "category": "Part-Time Job / Task Fraud"
+  },
+  {
+    "id": 6,
+    "text": "FEDEX ALERT: Your parcel from Mumbai to Taiwan containing 5 passports and 200g MDMA has been detained by Mumbai Customs. Digital arrest warrant issued. Contact CBI officer urgently.",
+    "ground_truth": "SCAM",
+    "category": "Digital Arrest & Police Extortion"
+  },
+  {
+    "id": 7,
+    "text": "Dear customer you have won 25 Lakh Rupees in KBC Jio Lucky Draw 2026. Your winner lottery number is #7729. Contact KBC manager Rana Pratap Singh on WhatsApp: 9819203912.",
+    "ground_truth": "SCAM",
+    "category": "Lottery & KBC Lucky Draw"
+  },
+  {
+    "id": 8,
+    "text": "HDFC Bank: Your NetBanking access is suspended due to invalid Aadhaar link. Submit your KYC within 24 hours to reactivate: https://hdfc-netverify.online/auth",
+    "ground_truth": "SCAM",
+    "category": "Bank KYC & Pan Card Phishing"
+  },
+  {
+    "id": 9,
+    "text": "Airtel Important: Your SIM card services will be blocked within 24 hours due to non-submission of document. Call customer care officer 9811029381 to verify your SIM.",
+    "ground_truth": "SCAM",
+    "category": "Bank KYC & Pan Card Phishing"
+  },
+  {
+    "id": 10,
+    "text": "Online Freelance Opportunity: Earn Rs 4500 daily by simple tasks. Daily instant payout in UPI. Contact our HR on WhatsApp: https://wa.me/919988221100",
+    "ground_truth": "SCAM",
+    "category": "Part-Time Job / Task Fraud"
+  },
+  {
+    "id": 11,
+    "text": "Dear user, personal loan of Rs 5,00,000 is approved without CIBIL or income proof at 1% interest. Click to download loan app: https://fast-loan-india.xyz/apply.apk",
+    "ground_truth": "SCAM",
+    "category": "Malicious APK File Download"
+  },
+  {
+    "id": 12,
+    "text": "Jio Anniversary Gift: Government of India offering free 3-month 5G unlimited recharge to all users. Click here to claim free recharge: https://jio-free-recharge.site/5g",
+    "ground_truth": "SCAM",
+    "category": "Lottery & KBC Lucky Draw"
+  },
+  {
+    "id": 13,
+    "text": "Income Tax Department: Your tax refund of Rs 15,490 has been approved. Please verify your bank account details and submit OTP to credit refund: http://cutt.ly/it-refund-2026",
+    "ground_truth": "SCAM",
+    "category": "Bank KYC & Pan Card Phishing"
+  },
+  {
+    "id": 14,
+    "text": "Urgent: Cyber crime police Mumbai has registered a case against your number for viewing prohibited content. Pay penalty of Rs 12,000 immediately to avoid arrest. Contact officer.",
+    "ground_truth": "SCAM",
+    "category": "Digital Arrest & Police Extortion"
+  },
+  {
+    "id": 15,
+    "text": "Electricity Bill Alert: Your power supply will be cut off at 9:30 PM due to unupdated bill. Pay immediately or call officer 9712039481.",
+    "ground_truth": "SCAM",
+    "category": "Electricity Bill Disconnection Fraud"
+  },
+  {
+    "id": 16,
+    "text": "HDFC Bank Alert: A/c *1092 debited by Rs. 450.00 at Swiggy on 28-OCT-26. Avail bal: Rs 24,190.50. Call 18002583838 if not you.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Bank Alert"
+  },
+  {
+    "id": 17,
+    "text": "492014 is your Amazon verification OTP. Valid for 10 minutes. Do not share your OTP with anyone.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate OTP"
+  },
+  {
+    "id": 18,
+    "text": "IRCTC: PNR 2419201940 is Confirmed. Train 12952 Rajdhani Exp, Date 30-Oct-26, Coach B3, Berth 24. Wish you a happy journey.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Travel Alert"
+  },
+  {
+    "id": 19,
+    "text": "Your Swiggy order from Cafe Goodluck has been placed! Delivery partner will arrive in 22 minutes.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 20,
+    "text": "CoWIN: Mr. Rajesh Kumar has been successfully vaccinated with Dose 2 of Covishield on 28-Oct-26. Download certificate from cowin.gov.in.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Government Notice"
+  },
+  {
+    "id": 21,
+    "text": "State Bank of India: Your account ending with 4821 has available balance of Rs. 38,400.20 as of 28-OCT-26.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Bank Alert"
+  },
+  {
+    "id": 22,
+    "text": "G-882910 is your Google verification code. Never share this code with anyone.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate OTP"
+  },
+  {
+    "id": 23,
+    "text": "Zomato: Order #883921 from Burger King has been delivered. Enjoy your meal!",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 24,
+    "text": "Flipkart: Your order containing boAt Airdopes has been dispatched via Ekart Logistics with tracking ID FMPC9948210.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 25,
+    "text": "Airtel: Thank you for payment of Rs 399.00 towards your postpaid mobile 9820011223. Ref ID: AIR772910.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 26,
+    "text": "Your Uber ride PIN is 5912. Share this PIN with driver partner Ramesh Kumar upon boarding.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate OTP"
+  },
+  {
+    "id": 27,
+    "text": "BookMyShow: Booking confirmed for Interstellar at PVR Phoenix Pune on 30-Oct-26, 07:15 PM. Booking ID: WKK8892.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 28,
+    "text": "Tata Play: Recharge of Rs. 400.00 is successful for Subscriber ID 109283910. Next recharge due on 28-Nov-26.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 29,
+    "text": "Indane Gas: Your LPG refill booking order number 449102 has been received. Cylinder will be delivered in 2 business days.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  },
+  {
+    "id": 30,
+    "text": "CRED: Payment of Rs. 14,500.00 towards your HDFC Credit Card ending in 4091 is confirmed. Billed on time.",
+    "ground_truth": "BENIGN",
+    "category": "Legitimate Service Update"
+  }
+]
