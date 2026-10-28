@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "pr_title": "db: drop legacy user_phone column from users table",
+    "changed_files": ["alembic/versions/004_drop_phone.py", "app/models/user.py"],
+    "git_diff": "diff --git a/app/models/user.py b/app/models/user.py\n--- a/app/models/user.py\n+++ b/app/models/user.py\n@@ -10,3 +10,1 @@\n-    phone = Column(String(20), nullable=True)\n+    # phone dropped\ndiff --git a/alembic/versions/004_drop_phone.py b/alembic/versions/004_drop_phone.py\n+    op.drop_column('users', 'user_phone')",
+    "expected_risk": "CRITICAL",
+    "expected_breaking": true,
+    "expected_change_type": "DATABASE_MIGRATION"
+  },
+  {
+    "id": 2,
+    "pr_title": "docs: update deployment guidelines in README",
+    "changed_files": ["README.md", "docs/deploy.md"],
+    "git_diff": "diff --git a/README.md b/README.md\n--- a/README.md\n+++ b/README.md\n@@ -5,2 +5,4 @@\n-## Local Setup\n+## Production Deployment with Docker Compose\n+Run `docker compose up -d`",
+    "expected_risk": "LOW",
+    "expected_breaking": false,
+    "expected_change_type": "DOCUMENTATION_CHANGE"
+  },
+  {
+    "id": 3,
+    "pr_title": "api: remove deprecated v1 user receipt endpoint",
+    "changed_files": ["app/api/v1/receipts.py"],
+    "git_diff": "diff --git a/app/api/v1/receipts.py b/app/api/v1/receipts.py\n--- a/app/api/v1/receipts.py\n+++ b/app/api/v1/receipts.py\n@@ -45,10 +45,0 @@\n-@router.get('/legacy-receipts')\n-def get_legacy_receipts():\n-    return []",
+    "expected_risk": "CRITICAL",
+    "expected_breaking": true,
+    "expected_change_type": "API_ENDPOINT_CHANGE"
+  },
+  {
+    "id": 4,
+    "pr_title": "schema: remove required client_tax_id from invoice model",
+    "changed_files": ["app/models/schemas.py"],
+    "git_diff": "diff --git a/app/models/schemas.py b/app/models/schemas.py\n--- a/app/models/schemas.py\n+++ b/app/models/schemas.py\n@@ -20,12 +20,4 @@\n class InvoiceSchema(BaseModel):\n-    client_tax_id: str\n-    billing_address: str\n-    account_ref: str\n-    vat_rate: float\n-    notes: str\n-    is_tax_exempt: bool\n+    client_name: str",
+    "expected_risk": "HIGH",
+    "expected_breaking": true,
+    "expected_change_type": "CORE_SCHEMA_CHANGE"
+  },
+  {
+    "id": 5,
+    "pr_title": "feat: add optional description field to civic reports schema",
+    "changed_files": ["app/models/schemas.py"],
+    "git_diff": "diff --git a/app/models/schemas.py b/app/models/schemas.py\n--- a/app/models/schemas.py\n+++ b/app/models/schemas.py\n@@ -30,2 +30,4 @@\n+    notes: Optional[str] = None\n+    priority_tag: str = 'NORMAL'",
+    "expected_risk": "MEDIUM",
+    "expected_breaking": false,
+    "expected_change_type": "CORE_SCHEMA_CHANGE"
+  },
+  {
+    "id": 6,
+    "pr_title": "fix: correct GST TDS rounding in billing service",
+    "changed_files": ["app/services/billing.py"],
+    "git_diff": "diff --git a/app/services/billing.py b/app/services/billing.py\n--- a/app/services/billing.py\n+++ b/app/services/billing.py\n@@ -50,2 +50,2 @@\n-    return round(gross * 0.10)\n+    return round(gross * 0.10, 2)",
+    "expected_risk": "MEDIUM",
+    "expected_breaking": false,
+    "expected_change_type": "INTERNAL_LOGIC_CHANGE"
+  },
+  {
+    "id": 7,
+    "pr_title": "test: add unit test coverage for receipt parser",
+    "changed_files": ["tests/test_receipts.py"],
+    "git_diff": "diff --git a/tests/test_receipts.py b/tests/test_receipts.py\n--- a/tests/test_receipts.py\n+++ b/tests/test_receipts.py\n@@ -100,5 +100,10 @@\n+def test_heurtic_fallback():\n+    assert True",
+    "expected_risk": "LOW",
+    "expected_breaking": false,
+    "expected_change_type": "TEST_ONLY_CHANGE"
+  },
+  {
+    "id": 8,
+    "pr_title": "db: rename users table to corporate_accounts",
+    "changed_files": ["alembic/versions/005_rename_users.py"],
+    "git_diff": "diff --git a/alembic/versions/005_rename_users.py b/alembic/versions/005_rename_users.py\n+    op.rename_table('users', 'corporate_accounts')",
+    "expected_risk": "CRITICAL",
+    "expected_breaking": true,
+    "expected_change_type": "DATABASE_MIGRATION"
+  },
+  {
+    "id": 9,
+    "pr_title": "docs: add swagger API documentation and tutorial",
+    "changed_files": ["docs/api.md"],
+    "git_diff": "diff --git a/docs/api.md b/docs/api.md\n+## API Reference Manual\n+Visit /docs for Interactive Swagger UI",
+    "expected_risk": "LOW",
+    "expected_breaking": false,
+    "expected_change_type": "DOCUMENTATION_CHANGE"
+  },
+  {
+    "id": 10,
+    "pr_title": "refactor: optimize auth token verification latency",
+    "changed_files": ["app/services/auth.py"],
+    "git_diff": "diff --git a/app/services/auth.py b/app/services/auth.py\n--- a/app/services/auth.py\n+++ b/app/services/auth.py\n@@ -25,2 +25,4 @@\n+    # cached token verification\n+    return token_cache.get(token)",
+    "expected_risk": "MEDIUM",
+    "expected_breaking": false,
+    "expected_change_type": "INTERNAL_LOGIC_CHANGE"
+  },
+  {
+    "id": 11,
+    "pr_title": "api: update vendor verification response schema",
+    "changed_files": ["app/api/v1/vendor.py"],
+    "git_diff": "diff --git a/app/api/v1/vendor.py b/app/api/v1/vendor.py\n--- a/app/api/v1/vendor.py\n+++ b/app/api/v1/vendor.py\n@@ -15,2 +15,4 @@\n-@router.post('/verify')\n-def verify():\n+@router.post('/verify')\n+def verify_v2(request: VendorRequest):",
+    "expected_risk": "MEDIUM",
+    "expected_breaking": false,
+    "expected_change_type": "API_ENDPOINT_CHANGE"
+  },
+  {
+    "id": 12,
+    "pr_title": "test: add integration test cases for bank statement parser",
+    "changed_files": ["tests/test_banking.py"],
+    "git_diff": "diff --git a/tests/test_banking.py b/tests/test_banking.py\n+def test_fuzzy_narration_match():\n+    assert True",
+    "expected_risk": "LOW",
+    "expected_breaking": false,
+    "expected_change_type": "TEST_ONLY_CHANGE"
+  },
+  {
+    "id": 13,
+    "pr_title": "db: drop invoices total_withholding column",
+    "changed_files": ["alembic/versions/006_drop_withholding.py"],
+    "git_diff": "diff --git a/alembic/versions/006_drop_withholding.py b/alembic/versions/006_drop_withholding.py\n+    op.drop_column('invoices', 'total_withholding')",
+    "expected_risk": "CRITICAL",
+    "expected_breaking": true,
+    "expected_change_type": "DATABASE_MIGRATION"
+  },
+  {
+    "id": 14,
+    "pr_title": "docs: add release notes for v1.2.0",
+    "changed_files": ["CHANGELOG.md"],
+    "git_diff": "diff --git a/CHANGELOG.md b/CHANGELOG.md\n+# v1.2.0 Release Notes\n+- Enhanced vendor verification\n+- Fixed TDS calculation",
+    "expected_risk": "LOW",
+    "expected_breaking": false,
+    "expected_change_type": "DOCUMENTATION_CHANGE"
+  },
+  {
+    "id": 15,
+    "pr_title": "feat: add webhook event dispatcher in report processor",
+    "changed_files": ["app/services/reports.py"],
+    "git_diff": "diff --git a/app/services/reports.py b/app/services/reports.py\n--- a/app/services/reports.py\n+++ b/app/services/reports.py\n@@ -80,2 +80,6 @@\n+    def dispatch_webhook(event: str):\n+        httpx.post(url, json={'event': event})",
+    "expected_risk": "MEDIUM",
+    "expected_breaking": false,
+    "expected_change_type": "INTERNAL_LOGIC_CHANGE"
+  }
+]
