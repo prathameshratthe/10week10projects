@@ -22,3 +22,12 @@ app.include_router(tenders_router, prefix=f"{settings.API_V1_STR}/tenders", tags
 @app.get("/health")
 def health_check():
     return {"status": "ok", "service": "tenderlens-api", "version": "1.0.0"}
+
+@app.get("/")
+def root():
+    return {
+        "message": "Welcome to TenderLens API — Public Tender & RFP Compliance Analyzer",
+        "docs_url": "/docs",
+        "health_url": "/health",
+        "version": "1.0.0"
+    }

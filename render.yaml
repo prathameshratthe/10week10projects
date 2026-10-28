@@ -82,6 +82,6 @@ services:
   - type: web
     name: tenderlens-week10
     env: python
-    buildCommand: pip install -r projects/week-01-warrantywise/backend/requirements.txt
+    buildCommand: pip install -r projects/week-10-tenderlens/backend/requirements.txt
     startCommand: uvicorn app.main:app --app-dir projects/week-10-tenderlens/backend --host 0.0.0.0 --port $PORT
     plan: free
