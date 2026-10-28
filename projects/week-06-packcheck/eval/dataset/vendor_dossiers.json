@@ -1,0 +1,587 @@
+[
+  {
+    "id": 1,
+    "vendor_name": "Apex Cloud Infotech Pvt Ltd",
+    "dossier": {
+      "vendor_registered_name": "Apex Cloud Infotech Pvt Ltd",
+      "vendor_pan": "AAACA1234F",
+      "vendor_gstin": "27AAACA1234F1Z5",
+      "bank_account_holder": "Apex Cloud Infotech Pvt Ltd",
+      "bank_ifsc": "HDFC0001234",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Registration Certificate REG-06",
+          "status": "PRESENT_VERIFIED",
+          "extracted_entity_name": "Apex Cloud Infotech Pvt Ltd",
+          "extracted_identifier": "27AAACA1234F1Z5",
+          "is_expired": false,
+          "findings": "Active GSTIN in Maharashtra State."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "Company PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_entity_name": "Apex Cloud Infotech Pvt Ltd",
+          "extracted_identifier": "AAACA1234F",
+          "is_expired": false,
+          "findings": "PAN matches GST characters 3-12."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Corporate Cheque",
+          "status": "PRESENT_VERIFIED",
+          "extracted_entity_name": "Apex Cloud Infotech Pvt Ltd",
+          "extracted_identifier": "HDFC0001234",
+          "is_expired": false,
+          "findings": "Current account verified with matching beneficiary."
+        },
+        {
+          "doc_type": "UDYAM_MSME",
+          "document_name": "Udyam Registration Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_entity_name": "Apex Cloud Infotech Pvt Ltd",
+          "extracted_identifier": "UDYAM-MH-12-0045678",
+          "is_expired": false,
+          "findings": "Medium enterprise verified."
+        }
+      ]
+    },
+    "expected_verdict": "APPROVED",
+    "expected_has_red_flags": false
+  },
+  {
+    "id": 2,
+    "vendor_name": "Zenith Steel Traders (Tax ID Mismatch Fraud)",
+    "dossier": {
+      "vendor_registered_name": "Zenith Steel Traders",
+      "vendor_pan": "ABCDE9999Z",
+      "vendor_gstin": "27AAAAA1111A1Z1",
+      "bank_account_holder": "Zenith Steel Traders",
+      "bank_ifsc": "ICIC0000987",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AAAAA1111A1Z1",
+          "is_expired": false,
+          "findings": "GST registered under different PAN."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "ABCDE9999Z",
+          "is_expired": false,
+          "findings": "PAN does not match GSTIN digits."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Cheque present."
+        }
+      ]
+    },
+    "expected_verdict": "REJECTED",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 3,
+    "vendor_name": "BlueStar Facilities (Expired ISO Certificate)",
+    "dossier": {
+      "vendor_registered_name": "BlueStar Facilities LLP",
+      "vendor_pan": "AABCB5678K",
+      "vendor_gstin": "29AABCB5678K1Z3",
+      "bank_account_holder": "BlueStar Facilities LLP",
+      "bank_ifsc": "SBIN0004567",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "29AABCB5678K1Z3",
+          "is_expired": false,
+          "findings": "Active Karnataka GSTIN."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AABCB5678K",
+          "is_expired": false,
+          "findings": "PAN verified."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Account verified."
+        },
+        {
+          "doc_type": "ISO_CERTIFICATE",
+          "document_name": "ISO 9001:2015 Quality Certificate",
+          "status": "EXPIRED",
+          "expiry_date": "2024-05-15",
+          "is_expired": true,
+          "findings": "Certificate lapsed 2 years ago."
+        }
+      ]
+    },
+    "expected_verdict": "CONDITIONAL_APPROVAL",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 4,
+    "vendor_name": "QuickFix Logistics (Missing Bank Cheque)",
+    "dossier": {
+      "vendor_registered_name": "QuickFix Logistics Pvt Ltd",
+      "vendor_pan": "AACCL4444M",
+      "vendor_gstin": "06AACCL4444M1Z8",
+      "bank_account_holder": "QuickFix Logistics Pvt Ltd",
+      "bank_ifsc": "KKBK0008888",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "06AACCL4444M1Z8",
+          "is_expired": false,
+          "findings": "Haryana GST verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "Company PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AACCL4444M",
+          "is_expired": false,
+          "findings": "PAN verified."
+        }
+      ]
+    },
+    "expected_verdict": "REJECTED",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 5,
+    "vendor_name": "Metro Printworks (Third-Party Account Fraud)",
+    "dossier": {
+      "vendor_registered_name": "Metro Printworks Pvt Ltd",
+      "vendor_pan": "AABCM1122P",
+      "vendor_gstin": "27AABCM1122P1Z0",
+      "bank_account_holder": "Rajesh Sharma Individual Savings",
+      "bank_ifsc": "PUNB0001234",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AABCM1122P1Z0",
+          "is_expired": false,
+          "findings": "Corporate GSTIN active."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "Corporate PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AABCM1122P",
+          "is_expired": false,
+          "findings": "Corporate PAN."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "extracted_entity_name": "Rajesh Sharma",
+          "is_expired": false,
+          "findings": "Cheque submitted is personal savings account, not corporate."
+        }
+      ]
+    },
+    "expected_verdict": "REJECTED",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 6,
+    "vendor_name": "Falcon Security Services",
+    "dossier": {
+      "vendor_registered_name": "Falcon Security Services LLP",
+      "vendor_pan": "AAACF7788R",
+      "vendor_gstin": "27AAACF7788R1Z9",
+      "bank_account_holder": "Falcon Security Services LLP",
+      "bank_ifsc": "UTIB0000456",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Registration",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AAACF7788R1Z9",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACF7788R",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Verified."
+        }
+      ]
+    },
+    "expected_verdict": "APPROVED",
+    "expected_has_red_flags": false
+  },
+  {
+    "id": 7,
+    "vendor_name": "GreenLeaf Packaging (Name Mismatch on Udyam)",
+    "dossier": {
+      "vendor_registered_name": "GreenLeaf Packaging Solutions Pvt Ltd",
+      "vendor_pan": "AABCG3344T",
+      "vendor_gstin": "24AABCG3344T1Z2",
+      "bank_account_holder": "GreenLeaf Packaging Solutions Pvt Ltd",
+      "bank_ifsc": "HDFC0004321",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "24AABCG3344T1Z2",
+          "is_expired": false,
+          "findings": "Active Gujarat GST."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AABCG3344T",
+          "is_expired": false,
+          "findings": "PAN matched."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Bank verified."
+        },
+        {
+          "doc_type": "UDYAM_MSME",
+          "document_name": "Udyam Certificate",
+          "status": "NAME_MISMATCH",
+          "extracted_entity_name": "SunGreen Packaging Proprietary",
+          "is_expired": false,
+          "findings": "Udyam issued to old proprietary entity before incorporation."
+        }
+      ]
+    },
+    "expected_verdict": "CONDITIONAL_APPROVAL",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 8,
+    "vendor_name": "Prime Cabs Transport",
+    "dossier": {
+      "vendor_registered_name": "Prime Cabs Transport Pvt Ltd",
+      "vendor_pan": "AAACP8899K",
+      "vendor_gstin": "27AAACP8899K1Z4",
+      "bank_account_holder": "Prime Cabs Transport Pvt Ltd",
+      "bank_ifsc": "ICIC0001122",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AAACP8899K1Z4",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACP8899K",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Verified."
+        }
+      ]
+    },
+    "expected_verdict": "APPROVED",
+    "expected_has_red_flags": false
+  },
+  {
+    "id": 9,
+    "vendor_name": "Shree Ganesh Electricals (Missing GST)",
+    "dossier": {
+      "vendor_registered_name": "Shree Ganesh Electricals",
+      "vendor_pan": "AABCS5566L",
+      "vendor_gstin": "",
+      "bank_account_holder": "Shree Ganesh Electricals",
+      "bank_ifsc": "BARB0007890",
+      "documents": [
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AABCS5566L",
+          "is_expired": false,
+          "findings": "PAN submitted."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Cheque submitted."
+        }
+      ]
+    },
+    "expected_verdict": "REJECTED",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 10,
+    "vendor_name": "Vanguard Security Solutions",
+    "dossier": {
+      "vendor_registered_name": "Vanguard Security Solutions Pvt Ltd",
+      "vendor_pan": "AAACV6677N",
+      "vendor_gstin": "27AAACV6677N1Z7",
+      "bank_account_holder": "Vanguard Security Solutions Pvt Ltd",
+      "bank_ifsc": "HDFC0009988",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AAACV6677N1Z7",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACV6677N",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Verified."
+        }
+      ]
+    },
+    "expected_verdict": "APPROVED",
+    "expected_has_red_flags": false
+  },
+  {
+    "id": 11,
+    "vendor_name": "Delta Tech Hardware (Malformed GSTIN)",
+    "dossier": {
+      "vendor_registered_name": "Delta Tech Hardware",
+      "vendor_pan": "AAACD1111E",
+      "vendor_gstin": "27AAACD1111E1Z",
+      "bank_account_holder": "Delta Tech Hardware",
+      "bank_ifsc": "SBIN0001111",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "INVALID_TAX_ID",
+          "extracted_identifier": "27AAACD1111E1Z",
+          "is_expired": false,
+          "findings": "14-character GSTIN missing last checksum character."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACD1111E",
+          "is_expired": false,
+          "findings": "Valid PAN."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Cheque valid."
+        }
+      ]
+    },
+    "expected_verdict": "REJECTED",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 12,
+    "vendor_name": "Trident Engineering Works",
+    "dossier": {
+      "vendor_registered_name": "Trident Engineering Works Pvt Ltd",
+      "vendor_pan": "AAACT2233M",
+      "vendor_gstin": "33AAACT2233M1Z6",
+      "bank_account_holder": "Trident Engineering Works Pvt Ltd",
+      "bank_ifsc": "IOBA0001234",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "33AAACT2233M1Z6",
+          "is_expired": false,
+          "findings": "Tamil Nadu GST verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACT2233M",
+          "is_expired": false,
+          "findings": "PAN matched."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Account verified."
+        }
+      ]
+    },
+    "expected_verdict": "APPROVED",
+    "expected_has_red_flags": false
+  },
+  {
+    "id": 13,
+    "vendor_name": "Aura Consulting (Expired MSME)",
+    "dossier": {
+      "vendor_registered_name": "Aura Consulting LLP",
+      "vendor_pan": "AAACA7766P",
+      "vendor_gstin": "27AAACA7766P1Z1",
+      "bank_account_holder": "Aura Consulting LLP",
+      "bank_ifsc": "HDFC0005555",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AAACA7766P1Z1",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACA7766P",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "UDYAM_MSME",
+          "document_name": "Udyog Aadhaar (Old Scheme)",
+          "status": "EXPIRED",
+          "expiry_date": "2022-03-31",
+          "is_expired": true,
+          "findings": "Udyog Aadhaar invalid after 31 March 2022. Migration to Udyam required."
+        }
+      ]
+    },
+    "expected_verdict": "CONDITIONAL_APPROVAL",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 14,
+    "vendor_name": "Horizon Caterers (Missing PAN)",
+    "dossier": {
+      "vendor_registered_name": "Horizon Caterers",
+      "vendor_pan": "",
+      "vendor_gstin": "27AABCH9988Q1Z5",
+      "bank_account_holder": "Horizon Caterers",
+      "bank_ifsc": "CBIN0280123",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "27AABCH9988Q1Z5",
+          "is_expired": false,
+          "findings": "GST submitted."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Cheque submitted."
+        }
+      ]
+    },
+    "expected_verdict": "REJECTED",
+    "expected_has_red_flags": true
+  },
+  {
+    "id": 15,
+    "vendor_name": "Zenith Infotech Solutions",
+    "dossier": {
+      "vendor_registered_name": "Zenith Infotech Solutions Pvt Ltd",
+      "vendor_pan": "AAACZ9900L",
+      "vendor_gstin": "29AAACZ9900L1Z8",
+      "bank_account_holder": "Zenith Infotech Solutions Pvt Ltd",
+      "bank_ifsc": "ICIC0003344",
+      "documents": [
+        {
+          "doc_type": "GST_CERTIFICATE",
+          "document_name": "GST Certificate",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "29AAACZ9900L1Z8",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "PAN_CARD",
+          "document_name": "PAN Card",
+          "status": "PRESENT_VERIFIED",
+          "extracted_identifier": "AAACZ9900L",
+          "is_expired": false,
+          "findings": "Verified."
+        },
+        {
+          "doc_type": "BANK_CHEQUE",
+          "document_name": "Cancelled Cheque",
+          "status": "PRESENT_VERIFIED",
+          "is_expired": false,
+          "findings": "Verified."
+        }
+      ]
+    },
+    "expected_verdict": "APPROVED",
+    "expected_has_red_flags": false
+  }
+]
