@@ -10,18 +10,18 @@
 
 Every project is fully functional, equipped with a dedicated FastAPI backend, React 18 + Vite frontend, unit test suite (`pytest`), benchmark dataset, and automated quantitative evaluation report (`EVALUATION_REPORT.md`).
 
-| Week | Project | Category | Backend Port | Frontend Port | Cloud Service Name (Render) | Test Suite | Benchmark Score |
+| Week | Project | Category | Live Cloud URL (Render) | Interactive API Docs | Local Ports | Test Suite | Benchmark Score |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **[WarrantyWise](./projects/week-01-warrantywise)** | AI Receipt & Warranty Protection | `:8000` | `:5173` | `warrantywise-week01` | 12/12 Passed | 100.0% Accuracy |
-| **02** | **[ScamLens India](./projects/week-02-scamlens-india)** | Indian Cyber Fraud Detector | `:8001` | `:5174` | `scamlens-india-week02` | 3/3 Passed | 100.0% Detection, 0 FP |
-| **03** | **[CivicProof](./projects/week-03-civicproof)** | Municipal Grievance Triage & Deduplication | `:8002` | `:5175` | `civicproof-week03` | 3/3 Passed | 100.0% Triaged, 100% F1 |
-| **04** | **[Voice2WorkOrder](./projects/week-04-voice2workorder)** | Multilingual Voice Dictation to Job Cards | `:8003` | `:5176` | `voice2workorder-week04` | 3/3 Passed | 100.0% Extraction |
-| **05** | **[SchemeSathi](./projects/week-05-schemesathi)** | Official Gazette Welfare Grounding | `:8004` | `:5177` | `schemesathi-week05` | 3/3 Passed | 100.0% Gazette Match |
-| **06** | **[PackCheck](./projects/week-06-packcheck)** | B2B Vendor Compliance & PAN-in-GSTIN | `:8005` | `:5178` | `packcheck-week06` | 3/3 Passed | 100.0% Risk Recall |
-| **07** | **[InjectionLab](./projects/week-07-injectionlab)** | Prompt Injection & Red-Teaming Firewall | `:8006` | `:5179` | `injectionlab-week07` | 3/3 Passed | 100.0% ASR Blocked |
-| **08** | **[BillMatch](./projects/week-08-billmatch)** | GST Invoice to Bank TDS Reconciliation | `:8007` | `:5180` | `billmatch-week08` | 3/3 Passed | 100.0% Precision |
-| **09** | **[DiffGuard](./projects/week-09-diffguard)** | Git Diff Risk & CI Test Impact Analysis | `:8008` | `:5181` | `diffguard-week09` | 3/3 Passed | 100.0% Breaking Route |
-| **10** | **[TenderLens](./projects/week-10-tenderlens)** | Public Procurement RFP Analyzer & Citations | `:8009` | `:5182` | `tenderlens-week10` | 5/5 Passed | 100.0% Clause Grounding |
+| **01** | **[WarrantyWise](./projects/week-01-warrantywise)** | AI Receipt & Warranty Protection | [Live App](https://warrantywise-week01.onrender.com) | [Swagger UI](https://warrantywise-week01.onrender.com/docs) | `:8000` / `:5173` | 12/12 Passed | 100.0% Accuracy |
+| **02** | **[ScamLens India](./projects/week-02-scamlens-india)** | Indian Cyber Fraud Detector | [Live App](https://scamlens-india-week02.onrender.com) | [Swagger UI](https://scamlens-india-week02.onrender.com/docs) | `:8001` / `:5174` | 3/3 Passed | 100.0% Detection, 0 FP |
+| **03** | **[CivicProof](./projects/week-03-civicproof)** | Municipal Grievance Triage | [Live App](https://civicproof-week03.onrender.com) | [Swagger UI](https://civicproof-week03.onrender.com/docs) | `:8002` / `:5175` | 3/3 Passed | 100.0% Triaged, 100% F1 |
+| **04** | **[Voice2WorkOrder](./projects/week-04-voice2workorder)** | Multilingual Voice Dictation | [Live App](https://voice2workorder-week04.onrender.com) | [Swagger UI](https://voice2workorder-week04.onrender.com/docs) | `:8003` / `:5176` | 3/3 Passed | 100.0% Extraction |
+| **05** | **[SchemeSathi](./projects/week-05-schemesathi)** | Official Gazette Welfare Engine | [Live App](https://schemesathi-week05.onrender.com) | [Swagger UI](https://schemesathi-week05.onrender.com/docs) | `:8004` / `:5177` | 3/3 Passed | 100.0% Gazette Match |
+| **06** | **[PackCheck](./projects/week-06-packcheck)** | B2B Vendor Compliance | [Live App](https://packcheck-week06.onrender.com) | [Swagger UI](https://packcheck-week06.onrender.com/docs) | `:8005` / `:5178` | 3/3 Passed | 100.0% Risk Recall |
+| **07** | **[InjectionLab](./projects/week-07-injectionlab)** | Prompt Injection & Red-Teaming | [Live App](https://injectionlab-week07.onrender.com) | [Swagger UI](https://injectionlab-week07.onrender.com/docs) | `:8006` / `:5179` | 3/3 Passed | 100.0% ASR Blocked |
+| **08** | **[BillMatch](./projects/week-08-billmatch)** | GST Invoice TDS Reconciliation | [Live App](https://billmatch-week08.onrender.com) | [Swagger UI](https://billmatch-week08.onrender.com/docs) | `:8007` / `:5180` | 3/3 Passed | 100.0% Precision |
+| **09** | **[DiffGuard](./projects/week-09-diffguard)** | Git Diff Risk & CI Test Impact | [Live App](https://diffguard-week09.onrender.com) | [Swagger UI](https://diffguard-week09.onrender.com/docs) | `:8008` / `:5181` | 3/3 Passed | 100.0% Breaking Route |
+| **10** | **[TenderLens](./projects/week-10-tenderlens)** | Public Tender RFP Analyzer | [Live App](https://tenderlens-week10.onrender.com) | [Swagger UI](https://tenderlens-week10.onrender.com/docs) | `:8009` / `:5182` | 5/5 Passed | 100.0% Clause Grounding |
 
 ---
 
