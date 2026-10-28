@@ -55,11 +55,21 @@ async def health_check():
     }
 
 
-@app.get("/", tags=["Root"])
-async def root():
-    return {
-        "message": "Welcome to WarrantyWise API",
-        "docs_url": "/docs",
-        "health_url": "/health",
-        "version": "1.0.0",
-    }
+# Mount built frontend if present
+frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if not frontend_dist.exists():
+    frontend_dist = Path("/app/frontend-dist")
+if not frontend_dist.exists():
+    frontend_dist = Path(__file__).resolve().parent.parent / "frontend-dist"
+
+if frontend_dist.exists() and (frontend_dist / "index.html").exists():
+    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="frontend")
+else:
+    @app.get("/", tags=["Root"])
+    async def root():
+        return {
+            "message": "Welcome to WarrantyWise API",
+            "docs_url": "/docs",
+            "health_url": "/health",
+            "version": "1.0.0",
+        }

@@ -40,6 +40,10 @@ dist/
 dist-ssr/
 *.local
 
+# Keep production pre-built frontends for zero-config deployments
+!projects/**/frontend/dist/
+!projects/**/frontend/dist/**
+
 # Environment variables & secrets (NEVER COMMIT SECRETS)
 .env
 .env.*
