@@ -1,0 +1,152 @@
+[
+  {
+    "id": "tender-01-cpwd-highway",
+    "authority": "CPWD (Central Public Works Department)",
+    "expected_estimated_cost": 450000000.0,
+    "expected_turnover": 135000000.0,
+    "expected_emd": 9000000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nCENTRAL PUBLIC WORKS DEPARTMENT (CPWD)\nNIT No.: CPWD/NZ/DELHI/2026/NIT-882\nName of Work: Construction of 4-Lane Bypass Arterial Road with bituminous concrete in Outer Delhi Region.\nEstimated Cost: Rs. 45,00,00,000\nEarnest Money Deposit (EMD): Rs. 90,00,000\nMSE / MSME Exemption: MSE / MSME registered enterprises are exempt from submission of EMD.\n--- Page 2 ---\nCRITICAL DATES:\nLast Date and Time of Bid Submission: 25.11.2026 up to 15:00 Hrs IST\n--- Page 3 ---\nELIGIBILITY CRITERIA:\nAverage Annual Financial Turnover during the last 3 financial years should be at least Rs. 13,50,00,000.\nSolvency Certificate: Bank Solvency Certificate of Rs. 18,00,00,000.\n--- Page 4 ---\nTECHNICAL CRITERIA:\nSimilar Nature of Work defined as: Highway construction with bituminous concrete.\nThree works of Rs. 18,00,00,000 or Two works of Rs. 22,50,00,000 or One work of Rs. 36,00,00,000.\nJoint Venture (JV) is permitted for this tender."
+  },
+  {
+    "id": "tender-02-railway-station",
+    "authority": "Indian Railways",
+    "expected_estimated_cost": 185000000.0,
+    "expected_turnover": 92500000.0,
+    "expected_emd": 1075000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nWESTERN RAILWAY - ENGINEERING DEPARTMENT\nTENDER NOTICE NO.: WR-ENGG-BCT-2026-T-412\nTitle of Work: Station modernization, passenger amenities, automated escalators at Ratlam Division.\nEstimated Tender Value: Rs. 18,50,00,000\nEarnest Money Deposit (EMD): Rs. 10,75,000\nMSME Exemption: Micro and Small Enterprises are exempt from payment of EMD.\n--- Page 2 ---\nLast Date and Time for Bid Submission: 18.11.2026 up to 14:00 Hrs IST\n--- Page 3 ---\nAverage Annual Turnover: Contractor must have minimum average annual financial turnover of Rs. 9,25,00,000.\nSimilar Nature of Work defined as: Modernization of railway stations.\nJoint Venture (JV) is not allowed."
+  },
+  {
+    "id": "tender-03-gem-cloud",
+    "authority": "GeM (Government e-Marketplace)",
+    "expected_estimated_cost": 62000000.0,
+    "expected_turnover": 18600000.0,
+    "expected_emd": 1240000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nGOVERNMENT E-MARKETPLACE (GeM)\nGeM Bid No: GEM/2026/B/8941029\nTitle: Supply, Deployment & 3-Year Managed DevSecOps Services for Ministry Enterprise Platform.\nEstimated Value: Rs. 6,20,00,000\nBid Security / EMD: Rs. 12,40,000\nMSE Exemption: Startups and MSEs are exempt from EMD.\n--- Page 2 ---\nBid Submission End Date: 12.11.2026 at 17:00 Hrs\n--- Page 3 ---\nAnnual Turnover: Average annual turnover of last 3 years must be Rs. 1,86,00,000.\nSimilar Nature of Work defined as: Enterprise Cloud Architecture.\nJoint Venture not permitted."
+  },
+  {
+    "id": "tender-04-nhai-toll",
+    "authority": "NHAI",
+    "expected_estimated_cost": 320000000.0,
+    "expected_turnover": 96000000.0,
+    "expected_emd": 6400000.0,
+    "expected_msme_exemption": false,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nNATIONAL HIGHWAYS AUTHORITY OF INDIA (NHAI)\nTender Ref: NHAI/TECH/TOLL-ITS/2026/04\nName of Work: Construction & Operation of 16-Lane Automated FASTag Toll Plaza on NH-48.\nEstimated Cost: Rs. 32,00,00,000\nEarnest Money Deposit (EMD): Rs. 64,00,000\nNo MSME exemption applicable for National Highway toll concession projects.\n--- Page 2 ---\nSubmission Deadline: 05.12.2026 at 11:00 AM\n--- Page 3 ---\nAverage Annual Financial Turnover: Rs. 9,60,00,000 during last 3 FYs.\nSimilar Nature of Work defined as: Electronic toll collection plazas and intelligent highway traffic systems.\nJoint Venture (JV) is permitted."
+  },
+  {
+    "id": "tender-05-municipal-drainage",
+    "authority": "Municipal Corporation",
+    "expected_estimated_cost": 240000000.0,
+    "expected_turnover": 72000000.0,
+    "expected_emd": 4800000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nBRIHANMUMBAI MUNICIPAL CORPORATION (BMC)\nNIT No.: BMC/CH-ENG/SWD/2026/89\nSubject: Augmentation of underground storm water drainage and pumping station in Zone-3.\nEstimated Cost: Rs. 24,00,00,000\nEMD: Rs. 48,00,000\nExemption for MSEs as per Govt guidelines.\n--- Page 2 ---\nLast date of bid submission: 20.11.2026 up to 16:00 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover shall be at least Rs. 7,20,00,000.\nSimilar Nature of Work defined as: Underground stormwater box drains and pump stations.\nJoint Venture is not allowed."
+  },
+  {
+    "id": "tender-06-pwd-hospital",
+    "authority": "State PWD",
+    "expected_estimated_cost": 550000000.0,
+    "expected_turnover": 165000000.0,
+    "expected_emd": 11000000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nPUBLIC WORKS DEPARTMENT (MAHARASHTRA STATE)\nTender Notice No.: PWD/MED-INFRA/2026/44\nName of Work: Construction of 500-Bed Multi-Specialty District Hospital Complex (G+7).\nEstimated Cost: Rs. 55,00,00,000\nEarnest Money Deposit: Rs. 1,10,00,000\nMSME registered vendors are exempt from EMD deposit upon submission of valid registration.\n--- Page 2 ---\nLast date of submission: 28.11.2026 at 15:00 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover: Minimum Rs. 16,50,00,000 over 3 FYs.\nSimilar Nature of Work defined as: RCC multi-storey framed building with HVAC and fire fighting systems.\nJoint Venture (JV) permitted for hospital projects above 40 Cr."
+  },
+  {
+    "id": "tender-07-iocl-refinery",
+    "authority": "IOCL (Indian Oil Corporation Limited)",
+    "expected_estimated_cost": 120000000.0,
+    "expected_turnover": 36000000.0,
+    "expected_emd": 2400000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nINDIAN OIL CORPORATION LIMITED (IOCL)\nTender Ref: IOCL/MATHURA/MECH/2026/12\nScope of Work: Hydrocracker unit piping fabrication, high-pressure flange testing and valve overhauling.\nEstimated Value: Rs. 12,00,00,000\nEMD: Rs. 24,00,000\nMSE enterprises are exempt from EMD deposit.\n--- Page 2 ---\nLast Date and Time of Submission: 14.11.2026 at 17:00 Hrs\n--- Page 3 ---\nAverage Annual Turnover: At least Rs. 3,60,00,000 in last 3 financial years.\nSimilar Nature of Work defined as: Industrial refinery piping and hydrocarbon turnaround.\nJV not permitted."
+  },
+  {
+    "id": "tender-08-ongc-offshore",
+    "authority": "ONGC",
+    "expected_estimated_cost": 280000000.0,
+    "expected_turnover": 84000000.0,
+    "expected_emd": 5600000.0,
+    "expected_msme_exemption": false,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nOIL AND NATURAL GAS CORPORATION (ONGC)\nTender No.: ONGC/MR/LOG/2026/301\nTitle of Work: Charter hire of 2 Nos Offshore Supply Vessels (OSV) for Western Offshore Operations.\nEstimated Cost: Rs. 28,00,00,000\nEarnest Money Deposit (EMD): Rs. 56,00,000\nStrictly no MSME exemption for offshore marine vessel charter contracts.\n--- Page 2 ---\nLast Date of Bid Submission: 30.11.2026 at 14:00 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover: Rs. 8,40,00,000.\nSimilar Nature of Work defined as: Operation and charter hire of DP-2 offshore support vessels.\nJoint Venture (JV) is permitted."
+  },
+  {
+    "id": "tender-09-aai-baggage",
+    "authority": "Public Procurement Authority",
+    "expected_estimated_cost": 400000000.0,
+    "expected_turnover": 120000000.0,
+    "expected_emd": 8000000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nAIRPORTS AUTHORITY OF INDIA (AAI)\nNIT No.: AAI/ENGG/BHS/2026/55\nWork Description: Design, Supply, Installation & Commissioning of Inline CTX Baggage Handling System.\nEstimated Tender Value: Rs. 40,00,00,000\nEMD: Rs. 80,00,000\nMSME exemption eligible as per Central Public Procurement Portal norms.\n--- Page 2 ---\nLast Date for Submission: 19.11.2026 at 15:30 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover: Rs. 12,00,00,000.\nSimilar Nature of Work defined as: Automated baggage handling conveyors and inline screening.\nConsortium allowed with max 2 partners."
+  },
+  {
+    "id": "tender-10-electricity-substation",
+    "authority": "Public Procurement Authority",
+    "expected_estimated_cost": 350000000.0,
+    "expected_turnover": 105000000.0,
+    "expected_emd": 7000000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nSTATE ELECTRICITY TRANSMISSION CORPORATION\nNIT No.: SETC/TR-220KV/2026/18\nName of Work: Turnkey EPC construction of 220/33 kV Gas Insulated Substation (GIS) at Hinjewadi.\nPAC: Rs. 35,00,00,000\nEarnest Money Deposit (EMD): Rs. 70,00,000\nMicro and Small enterprises are exempt from EMD.\n--- Page 2 ---\nLast Date and Time of Submission: 22.11.2026 at 13:00 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover: Rs. 10,50,00,000 in past 3 FYs.\nSimilar Nature of Work defined as: Erection and commissioning of 132kV or higher GIS/AIS substations.\nJoint Venture (JV) permitted."
+  },
+  {
+    "id": "tender-11-smartcity-cctv",
+    "authority": "Municipal Corporation",
+    "expected_estimated_cost": 150000000.0,
+    "expected_turnover": 45000000.0,
+    "expected_emd": 3000000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nSMART CITY DEVELOPMENT CORPORATION / MUNICIPAL CORPORATION\nNIT No.: SCDCL/IT-CCTV/2026/09\nSubject: Integrated Command & Control Center (ICCC) surveillance with 1,200 AI CCTV cameras.\nEstimated Cost: Rs. 15,00,00,000\nEMD: Rs. 30,00,000\nMSME exemption allowed.\n--- Page 2 ---\nSubmission Deadline: 10.11.2026 up to 17:00 Hrs\n--- Page 3 ---\nAverage Annual Turnover: Rs. 4,50,00,000.\nSimilar Nature of Work defined as: City-wide optical fiber CCTV and video analytics.\nJoint Venture is not allowed."
+  },
+  {
+    "id": "tender-12-metro-track",
+    "authority": "Indian Railways",
+    "expected_estimated_cost": 210000000.0,
+    "expected_turnover": 63000000.0,
+    "expected_emd": 4200000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nMETRO RAILWAY / INDIAN RAILWAYS\nTender Ref: MR-CIVIL-TRACK-2026-03\nName of Work: Ballastless track laying, point crossings and flash butt welding on Elevated Corridor.\nEstimated Cost: Rs. 21,00,00,000\nEMD: Rs. 42,00,000\nExempted for Micro and Small Enterprises.\n--- Page 2 ---\nBid Submission End Date: 17.11.2026 at 15:00 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover: Rs. 6,30,00,000.\nSimilar Nature of Work defined as: Ballastless or ballasted track laying on railway/metro networks.\nJV not permitted."
+  },
+  {
+    "id": "tender-13-solar-rooftop",
+    "authority": "Public Procurement Authority",
+    "expected_estimated_cost": 85000000.0,
+    "expected_turnover": 25500000.0,
+    "expected_emd": 1700000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nCENTRAL UNIVERSITY INFRASTRUCTURE CELL\nNIT No.: CU/INFRA/SOLAR-PV/2026/01\nTitle: Design, Supply, Installation & 5-Year Comprehensive O&M of 2.5 MW Grid-Connected Solar Rooftop PV.\nEstimated Value: Rs. 8,50,00,000\nEarnest Money Deposit: Rs. 17,00,000\nMSME enterprises are exempt from submission of EMD.\n--- Page 2 ---\nLast Date of Bid Submission: 16.11.2026 at 14:00 Hrs\n--- Page 3 ---\nAverage Annual Turnover: Rs. 2,55,00,000.\nSimilar Nature of Work defined as: Grid-interactive solar photovoltaic power plant installation.\nJoint Venture not allowed."
+  },
+  {
+    "id": "tender-14-port-dredging",
+    "authority": "Public Procurement Authority",
+    "expected_estimated_cost": 650000000.0,
+    "expected_turnover": 195000000.0,
+    "expected_emd": 13000000.0,
+    "expected_msme_exemption": false,
+    "expected_jv_allowed": true,
+    "text": "--- Page 1 ---\nJAWAHARLAL NEHRU PORT AUTHORITY (JNPA)\nTender No.: JNPA/CIVIL/DREDGE-2026/78\nTitle of Work: Capital dredging of navigational channel and deepwater container berth pocket (-16m CD).\nEstimated Cost: Rs. 65,00,00,000\nEMD: Rs. 1,30,00,000\nStrictly no MSME exemption applicable due to specialized capital marine dredging requirements.\n--- Page 2 ---\nLast Date and Time of Submission: 02.12.2026 at 16:00 Hrs\n--- Page 3 ---\nAverage Annual Financial Turnover: Rs. 19,50,00,000 in last 3 financial years.\nSimilar Nature of Work defined as: Capital and maintenance dredging using Trailing Suction Hopper Dredgers.\nJoint Venture (JV) is permitted."
+  },
+  {
+    "id": "tender-15-aiims-oxygen",
+    "authority": "CPWD (Central Public Works Department)",
+    "expected_estimated_cost": 48000000.0,
+    "expected_turnover": 14400000.0,
+    "expected_emd": 960000.0,
+    "expected_msme_exemption": true,
+    "expected_jv_allowed": false,
+    "text": "--- Page 1 ---\nCPWD ELECTRICAL DIVISION (AIIMS COMPLEX)\nNIT No.: CPWD/MED-GAS/AIIMS/2026/102\nName of Work: Medical Gas Pipeline System (MGPS) with cryogenic liquid oxygen tank installation at Trauma Wing.\nEstimated Cost: Rs. 4,80,00,000\nEarnest Money Deposit (EMD): Rs. 9,60,000\nMSE / MSME registered enterprises are exempt from EMD upon furnishing valid Udyam certificate.\n--- Page 2 ---\nLast Date and Time of Submission: 11.11.2026 at 15:00 Hrs\n--- Page 3 ---\nAverage Annual Turnover: Rs. 1,44,00,000 (30% of estimated cost).\nSimilar Nature of Work defined as: Medical gas piping and oxygen generation plant commissioning.\nJoint Venture is not allowed."
+  }
+]
