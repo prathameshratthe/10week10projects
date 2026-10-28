@@ -1,0 +1,186 @@
+{
+  "invoices": [
+    {
+      "invoice_no": "INV-2026-101",
+      "vendor_name": "Apex Cloud Infotech Pvt Ltd",
+      "invoice_date": "2026-10-01",
+      "gross_amount": 100000.0,
+      "tds_rate_pct": 10.0,
+      "expected_net_payable": 90000.0
+    },
+    {
+      "invoice_no": "INV-2026-102",
+      "vendor_name": "BlueStar Facilities LLP",
+      "invoice_date": "2026-10-03",
+      "gross_amount": 50000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 49000.0
+    },
+    {
+      "invoice_no": "INV-2026-103",
+      "vendor_name": "QuickFix Logistics Pvt Ltd",
+      "invoice_date": "2026-10-05",
+      "gross_amount": 35000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 34300.0
+    },
+    {
+      "invoice_no": "INV-2026-104",
+      "vendor_name": "Falcon Security Services LLP",
+      "invoice_date": "2026-10-07",
+      "gross_amount": 75000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 73500.0
+    },
+    {
+      "invoice_no": "INV-2026-105",
+      "vendor_name": "Metro Printworks Pvt Ltd",
+      "invoice_date": "2026-10-10",
+      "gross_amount": 18500.0,
+      "tds_rate_pct": 0.0,
+      "expected_net_payable": 18500.0
+    },
+    {
+      "invoice_no": "INV-2026-106",
+      "vendor_name": "GreenLeaf Packaging Solutions",
+      "invoice_date": "2026-10-12",
+      "gross_amount": 42000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 41160.0
+    },
+    {
+      "invoice_no": "INV-2026-107",
+      "vendor_name": "Prime Cabs Transport Pvt Ltd",
+      "invoice_date": "2026-10-15",
+      "gross_amount": 28000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 27440.0
+    },
+    {
+      "invoice_no": "INV-2026-108",
+      "vendor_name": "Vanguard Security Solutions",
+      "invoice_date": "2026-10-18",
+      "gross_amount": 88000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 86240.0
+    },
+    {
+      "invoice_no": "INV-2026-109",
+      "vendor_name": "Trident Engineering Works",
+      "invoice_date": "2026-10-20",
+      "gross_amount": 125000.0,
+      "tds_rate_pct": 10.0,
+      "expected_net_payable": 112500.0
+    },
+    {
+      "invoice_no": "INV-2026-110",
+      "vendor_name": "Aura Consulting LLP",
+      "invoice_date": "2026-10-22",
+      "gross_amount": 60000.0,
+      "tds_rate_pct": 10.0,
+      "expected_net_payable": 54000.0
+    },
+    {
+      "invoice_no": "INV-2026-111",
+      "vendor_name": "Unpaid Pending Supplier Corp",
+      "invoice_date": "2026-10-24",
+      "gross_amount": 95000.0,
+      "tds_rate_pct": 2.0,
+      "expected_net_payable": 93100.0
+    },
+    {
+      "invoice_no": "INV-2026-112",
+      "vendor_name": "Disputed Hardware Vendor",
+      "invoice_date": "2026-10-25",
+      "gross_amount": 24000.0,
+      "tds_rate_pct": 0.0,
+      "expected_net_payable": 24000.0
+    }
+  ],
+  "transactions": [
+    {
+      "txn_id": "TXN-8801",
+      "txn_date": "2026-10-02",
+      "narration": "NEFT/CMS/APEX CLD/HDFC0001/INV-2026-101",
+      "debit_amount": 90000.0,
+      "reference_utr": "HDFCN26275001"
+    },
+    {
+      "txn_id": "TXN-8802",
+      "txn_date": "2026-10-04",
+      "narration": "RTGS/BLUSTAR FAC/INV-2026-102",
+      "debit_amount": 49000.0,
+      "reference_utr": "SBINR26275002"
+    },
+    {
+      "txn_id": "TXN-8803",
+      "txn_date": "2026-10-06",
+      "narration": "CMS/QUICKFIX LOGISTICS/INV-2026-103",
+      "debit_amount": 34300.0,
+      "reference_utr": "KKBKN26275003"
+    },
+    {
+      "txn_id": "TXN-8804",
+      "txn_date": "2026-10-08",
+      "narration": "NEFT/FALCON SEC/INV-2026-104",
+      "debit_amount": 73500.0,
+      "reference_utr": "UTIBN26275004"
+    },
+    {
+      "txn_id": "TXN-8805",
+      "txn_date": "2026-10-11",
+      "narration": "IMPS/METRO PRINTWORKS/INV-2026-105",
+      "debit_amount": 18500.0,
+      "reference_utr": "PUNBN26275005"
+    },
+    {
+      "txn_id": "TXN-8806",
+      "txn_date": "2026-10-13",
+      "narration": "NEFT/GREENLEAF PACKAGING/INV-2026-106",
+      "debit_amount": 41160.0,
+      "reference_utr": "HDFCN26275006"
+    },
+    {
+      "txn_id": "TXN-8807",
+      "txn_date": "2026-10-16",
+      "narration": "NEFT/PRIME CABS/INV-2026-107",
+      "debit_amount": 27440.0,
+      "reference_utr": "ICICN26275007"
+    },
+    {
+      "txn_id": "TXN-8808",
+      "txn_date": "2026-10-19",
+      "narration": "RTGS/VANGUARD SEC/INV-2026-108",
+      "debit_amount": 86240.0,
+      "reference_utr": "HDFCR26275008"
+    },
+    {
+      "txn_id": "TXN-8809",
+      "txn_date": "2026-10-21",
+      "narration": "NEFT/TRIDENT ENGG/INV-2026-109",
+      "debit_amount": 112500.0,
+      "reference_utr": "IOBAN26275009"
+    },
+    {
+      "txn_id": "TXN-8810",
+      "txn_date": "2026-10-23",
+      "narration": "NEFT/AURA CONSULTING/INV-2026-110",
+      "debit_amount": 54000.0,
+      "reference_utr": "HDFCN26275010"
+    },
+    {
+      "txn_id": "TXN-8898",
+      "txn_date": "2026-10-27",
+      "narration": "BANK MONTHLY LEDGER MAINTENANCE CHARGE",
+      "debit_amount": 1180.0,
+      "reference_utr": "HDFCCHG9901"
+    },
+    {
+      "txn_id": "TXN-8899",
+      "txn_date": "2026-10-28",
+      "narration": "UNIDENTIFIED DIRECTOR DRAWINGS CASH DEBIT",
+      "debit_amount": 50000.0,
+      "reference_utr": "CASHWDL9902"
+    }
+  ]
+}
