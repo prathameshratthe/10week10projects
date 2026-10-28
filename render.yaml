@@ -1,0 +1,15 @@
+services:
+  # Week 01 - WarrantyWise
+  - type: web
+    name: warrantywise-week01
+    env: docker
+    dockerfilePath: projects/week-01-warrantywise/Dockerfile
+    dockerContext: projects/week-01-warrantywise
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: AI_PROVIDER
+        value: mock
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///./warrantywise.db
