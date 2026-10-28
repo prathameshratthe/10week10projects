@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-jobcard, #printable-jobcard * {
+    visibility: visible;
+  }
+  #printable-jobcard {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+  }
+}

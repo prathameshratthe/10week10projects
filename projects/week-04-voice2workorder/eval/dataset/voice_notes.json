@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "transcript": "Haan bhai, Sharma ji ke flat pe gaya tha Kothrud mein. AC cooling nahi kar raha tha. Run capacitor 45 MFD jal gaya tha pura. Naya capacitor lagaya aur coil saaf kiya. Dedh ghanta laga pura kaam mein.",
+    "expected_trade": "HVAC",
+    "expected_hours": 1.5,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 2,
+    "transcript": "Emergency call tha Andheri West mein Patil sir ke bungalow pe. Kitchen ka main brass ball valve leak kar raha tha, pura floor paani se bhar gaya. Paani line band kiya, naya valve aur teflon tape lagaya. Dhai ghante lag gaye.",
+    "expected_trade": "PLUMBING",
+    "expected_hours": 2.5,
+    "expected_parts": true,
+    "expected_priority": "EMERGENCY"
+  },
+  {
+    "id": 3,
+    "transcript": "Whitefield apartment mein Verma madam ka switchboard sparking ho raha tha. Main MCB trip ho raha tha bar bar. Havells 16A MCB replace kiya aur wiring check kiya. 2 hours lag gaye.",
+    "expected_trade": "ELECTRICAL",
+    "expected_hours": 2.0,
+    "expected_parts": true,
+    "expected_priority": "EMERGENCY"
+  },
+  {
+    "id": 4,
+    "transcript": "Baner madhe Deshmukh sahebancha gharat gelet. Bathroom madhe flush valve leak hot hota continuous paani vahat hota. Rubber washers badalle aani tight kela. Ardha taas lagla.",
+    "expected_trade": "PLUMBING",
+    "expected_hours": 0.5,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 5,
+    "transcript": "Client Mr. Kulkarni at Sector 54 Gurgaon. Split AC gas leak issue. Checked pressure with manifold gauge, copper pipe leak found. Brazed 1/2-inch copper pipe and refilled R32 eco refrigerant gas. Took 3 hours.",
+    "expected_trade": "HVAC",
+    "expected_hours": 3.0,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 6,
+    "transcript": "Routine inspection at Sharma residence. Washing machine drain filter had coin obstruction. Cleaned filter and verified drain cycle. No parts used, 1 hour labor.",
+    "expected_trade": "APPLIANCE_REPAIR",
+    "expected_hours": 1.0,
+    "expected_parts": false,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 7,
+    "transcript": "Patil bungalow Baner. Living room teakwood main door latch was jammed. Dismantled lock cylinder and realigned strike plate. Dedh ghanta laga. No parts replaced.",
+    "expected_trade": "CARPENTRY",
+    "expected_hours": 1.5,
+    "expected_parts": false,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "transcript": "Emergency electrical short circuit at Sector 54 Gurgaon flat. Burning plastic smell from distribution board. MCB breaker isolated, wire rerouted. Immediate hazard cleared in 2 hours.",
+    "expected_trade": "ELECTRICAL",
+    "expected_hours": 2.0,
+    "expected_parts": true,
+    "expected_priority": "EMERGENCY"
+  },
+  {
+    "id": 9,
+    "transcript": "Bhai Kothrud mein paani supply line ka tap spindle kharab tha. Naya spindle lagaya paani tapekna band ho gaya. Aadha ghanta laga.",
+    "expected_trade": "PLUMBING",
+    "expected_hours": 0.5,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 10,
+    "transcript": "General maintenance call. Tightened loose cupboard handles and lubricated sliding drawer channels at Whitefield. 1.5 hours taken.",
+    "expected_trade": "CARPENTRY",
+    "expected_hours": 1.5,
+    "expected_parts": false,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 11,
+    "transcript": "Customer Mrs. Verma Whitefield. Double door refrigerator cooling failure. Tested relay and thermostat. R32 gas refill needed, customer approved. Took 2 hours.",
+    "expected_trade": "APPLIANCE_REPAIR",
+    "expected_hours": 2.0,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 12,
+    "transcript": "Bandra apartment mein AC service kiya. Filter wash kiya aur blower clean kiya. Koi part nahi laga. 1 hour.",
+    "expected_trade": "HVAC",
+    "expected_hours": 1.0,
+    "expected_parts": false,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 13,
+    "transcript": "Urgent water pipe burst on terrace water tank outlet at Kulkarni house. Flooding roof terrace. Ball valve replace kiya. Dhai ghante lag gaye.",
+    "expected_trade": "PLUMBING",
+    "expected_hours": 2.5,
+    "expected_parts": true,
+    "expected_priority": "EMERGENCY"
+  },
+  {
+    "id": 14,
+    "transcript": "Electrical fan regulator change kiya Deshmukh residence Baner mein. 16A anchor switch board check kiya. MCB replaced. 1 hour.",
+    "expected_trade": "ELECTRICAL",
+    "expected_hours": 1.0,
+    "expected_parts": true,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 15,
+    "transcript": "Microwave turntable roller stopped rotating. Cleaned drive coupling and tested heating for 5 minutes. No replacement parts. 1 hour.",
+    "expected_trade": "APPLIANCE_REPAIR",
+    "expected_hours": 1.0,
+    "expected_parts": false,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 16,
+    "transcript": "AC outdoor condenser unit vibration noise at Andheri West. Tightened motor brackets and replaced capacitor 45 MFD. 2 hours.",
+    "expected_trade": "HVAC",
+    "expected_hours": 2.0,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 17,
+    "transcript": "Kitchen sink trap pipe leakage. Replaced worn Teflon tape and rubber washers at Sharma ji flat. Dedh ghanta laga.",
+    "expected_trade": "PLUMBING",
+    "expected_hours": 1.5,
+    "expected_parts": true,
+    "expected_priority": "HIGH"
+  },
+  {
+    "id": 18,
+    "transcript": "Emergency electrical sparking inside main meter box. Smoke coming out. MCB breaker cut off immediately. Rewired meter mains in 2 hours.",
+    "expected_trade": "ELECTRICAL",
+    "expected_hours": 2.0,
+    "expected_parts": true,
+    "expected_priority": "EMERGENCY"
+  },
+  {
+    "id": 19,
+    "transcript": "Bedroom wardrobe hinge adjustment at Patil bungalow. Screws retightened and doors aligned smoothly. Aadha ghanta laga.",
+    "expected_trade": "CARPENTRY",
+    "expected_hours": 0.5,
+    "expected_parts": false,
+    "expected_priority": "MEDIUM"
+  },
+  {
+    "id": 20,
+    "transcript": "Commercial split AC not cooling server rack room. High urgent priority. Gas pressure 0 psi, copper pipe ruptured. Welded pipe and charged gas. 3 hours.",
+    "expected_trade": "HVAC",
+    "expected_hours": 3.0,
+    "expected_parts": true,
+    "expected_priority": "EMERGENCY"
+  }
+]
