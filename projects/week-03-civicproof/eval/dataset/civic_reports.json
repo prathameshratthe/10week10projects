@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "description": "Massive deep pothole on FC Road right in front of Starbucks cafe. Two-wheelers are almost falling.",
+    "location": "FC Road, Deccan, Pune",
+    "expected_category": "POTHOLE",
+    "expected_duplicate": true,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 2,
+    "description": "Huge open manhole without cover on 100ft Road footpath near metro pillar 42. Extremely dangerous for walkers at night.",
+    "location": "100ft Road, Indiranagar, Bangalore",
+    "expected_category": "OPEN_MANHOLE",
+    "expected_duplicate": true,
+    "expected_severity": "CRITICAL"
+  },
+  {
+    "id": 3,
+    "description": "Illegal garbage dump overflowing near KEM hospital gate. Foul smell and flies everywhere.",
+    "location": "Parel, Mumbai",
+    "expected_category": "GARBAGE_DUMP",
+    "expected_duplicate": true,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 4,
+    "description": "Streetlight pole #14 has been dark and flickering for three nights. Whole corner is pitch black.",
+    "location": "Sector 14, HSR Layout, Bangalore",
+    "expected_category": "BROKEN_STREETLIGHT",
+    "expected_duplicate": false,
+    "expected_severity": "MEDIUM"
+  },
+  {
+    "id": 5,
+    "description": "Drinking water pipeline burst under the road. Thousands of liters of water gushing onto street.",
+    "location": "Bandra West, Mumbai",
+    "expected_category": "WATER_LEAK",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 6,
+    "description": "Large tree fell after heavy thunderstorm, completely blocking the left lane of the road.",
+    "location": "Koregaon Park, Lane 5, Pune",
+    "expected_category": "FALLEN_TREE",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 7,
+    "description": "Multiple potholes and broken road asphalt near railway station flyover.",
+    "location": "Station Road, Dadar, Mumbai",
+    "expected_category": "POTHOLE",
+    "expected_duplicate": false,
+    "expected_severity": "MEDIUM"
+  },
+  {
+    "id": 8,
+    "description": "Commercial waste, plastic bags and rotting vegetable filth dumped on vacant plot next to school.",
+    "location": "Aundh Main Road, Pune",
+    "expected_category": "GARBAGE_DUMP",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 9,
+    "description": "Stormwater drain cover missing, open chamber on pedestrian walkway.",
+    "location": "Lajpat Nagar Market, New Delhi",
+    "expected_category": "OPEN_MANHOLE",
+    "expected_duplicate": false,
+    "expected_severity": "CRITICAL"
+  },
+  {
+    "id": 10,
+    "description": "Underground municipal water pipe leak causing artificial ponding in front of residential apartments.",
+    "location": "Whitefield Main Road, Bangalore",
+    "expected_category": "WATER_LEAK",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 11,
+    "description": "Another complaint about the same open manhole chamber on 100ft road Indiranagar near pillar.",
+    "location": "100ft Road, Indiranagar, Bangalore",
+    "expected_category": "OPEN_MANHOLE",
+    "expected_duplicate": true,
+    "expected_severity": "CRITICAL"
+  },
+  {
+    "id": 12,
+    "description": "Street lights completely out on 500 meter stretch from flyover to hospital.",
+    "location": "Ring Road, Ahmedabad",
+    "expected_category": "BROKEN_STREETLIGHT",
+    "expected_duplicate": false,
+    "expected_severity": "MEDIUM"
+  },
+  {
+    "id": 13,
+    "description": "Huge banyan tree branch broken and hanging dangerously over overhead electrical wires.",
+    "location": "Malleshwaram, Bangalore",
+    "expected_category": "FALLEN_TREE",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 14,
+    "description": "Deep crater road cave-in on highway service road. Car tire burst yesterday.",
+    "location": "Noida-Greater Noida Expressway, Sector 128",
+    "expected_category": "POTHOLE",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 15,
+    "description": "Overflowing public dustbin spreading garbage across walking pavement.",
+    "location": "Connaught Place Inner Circle, New Delhi",
+    "expected_category": "GARBAGE_DUMP",
+    "expected_duplicate": false,
+    "expected_severity": "MEDIUM"
+  },
+  {
+    "id": 16,
+    "description": "Clear drinking water leaking continuously from valve on footpath.",
+    "location": "Jubilee Hills, Road No 36, Hyderabad",
+    "expected_category": "WATER_LEAK",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 17,
+    "description": "There is a terrible pothole right opposite Starbucks cafe on FC Road Pune. Needs urgent patch.",
+    "location": "FC Road, Deccan, Pune",
+    "expected_category": "POTHOLE",
+    "expected_duplicate": true,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 18,
+    "description": "Trash dump piling up at Parel outside KEM hospital entrance.",
+    "location": "Parel, Mumbai",
+    "expected_category": "GARBAGE_DUMP",
+    "expected_duplicate": true,
+    "expected_severity": "HIGH"
+  },
+  {
+    "id": 19,
+    "description": "Lamp post lights shut off, entire residential cross road is dark.",
+    "location": "Koramangala 4th Block, Bangalore",
+    "expected_category": "BROKEN_STREETLIGHT",
+    "expected_duplicate": false,
+    "expected_severity": "MEDIUM"
+  },
+  {
+    "id": 20,
+    "description": "Dangerous pothole crater in middle of bus lane.",
+    "location": "Anna Salai, Chennai",
+    "expected_category": "POTHOLE",
+    "expected_duplicate": false,
+    "expected_severity": "HIGH"
+  }
+]
