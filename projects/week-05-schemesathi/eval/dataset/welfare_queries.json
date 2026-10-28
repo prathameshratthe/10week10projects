@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "profile": {
+      "name": "Ramesh Patil",
+      "age": 42,
+      "gender": "MALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 120000,
+      "occupation": "FARMER",
+      "landholding_acres": 2.5,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS"],
+    "expected_ineligible_codes": ["SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 2,
+    "profile": {
+      "name": "Sunita Deshmukh",
+      "age": 34,
+      "gender": "FEMALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 150000,
+      "occupation": "HOMEMAKER",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": true,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "PM_SVANIDHI"]
+  },
+  {
+    "id": 3,
+    "profile": {
+      "name": "Vikram Singh",
+      "age": 38,
+      "gender": "MALE",
+      "state": "Uttar Pradesh",
+      "annual_income_inr": 1800000,
+      "occupation": "SALARIED_PRIVATE",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": true,
+      "is_income_tax_payer": true
+    },
+    "expected_eligible_codes": ["SUKANYA_SAMRIDDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 4,
+    "profile": {
+      "name": "Mohammad Aslam",
+      "age": 29,
+      "gender": "MALE",
+      "state": "Delhi",
+      "annual_income_inr": 95000,
+      "occupation": "STREET_VENDOR",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "PM_AWAS", "PM_SVANIDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN"]
+  },
+  {
+    "id": 5,
+    "profile": {
+      "name": "Pooja Sharma",
+      "age": 28,
+      "gender": "FEMALE",
+      "state": "Rajasthan",
+      "annual_income_inr": 80000,
+      "occupation": "DAILY_WAGE_LABORER",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": true,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "PM_AWAS", "SUKANYA_SAMRIDDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 6,
+    "profile": {
+      "name": "Anil Kumar (Govt Officer)",
+      "age": 49,
+      "gender": "MALE",
+      "state": "Madhya Pradesh",
+      "annual_income_inr": 1200000,
+      "occupation": "GOVERNMENT_EMPLOYEE",
+      "landholding_acres": 5.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": true
+    },
+    "expected_eligible_codes": [],
+    "expected_ineligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 7,
+    "profile": {
+      "name": "Lakshmi Narayanan",
+      "age": 52,
+      "gender": "FEMALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 210000,
+      "occupation": "HOMEMAKER",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "LADKI_BAHIN"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "SUKANYA_SAMRIDDHI", "PM_SVANIDHI"]
+  },
+  {
+    "id": 8,
+    "profile": {
+      "name": "Balwinder Singh",
+      "age": 60,
+      "gender": "MALE",
+      "state": "Punjab",
+      "annual_income_inr": 180000,
+      "occupation": "FARMER",
+      "landholding_acres": 4.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT"],
+    "expected_ineligible_codes": ["PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 9,
+    "profile": {
+      "name": "Priyanka Kadam",
+      "age": 25,
+      "gender": "FEMALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 450000,
+      "occupation": "SALARIED_PRIVATE",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": true,
+      "is_income_tax_payer": true
+    },
+    "expected_eligible_codes": ["SUKANYA_SAMRIDDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 10,
+    "profile": {
+      "name": "Gopal Das",
+      "age": 35,
+      "gender": "MALE",
+      "state": "West Bengal",
+      "annual_income_inr": 85000,
+      "occupation": "STREET_VENDOR",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "PM_AWAS", "PM_SVANIDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN"]
+  },
+  {
+    "id": 11,
+    "profile": {
+      "name": "Manju Devi",
+      "age": 31,
+      "gender": "FEMALE",
+      "state": "Bihar",
+      "annual_income_inr": 72000,
+      "occupation": "DAILY_WAGE_LABORER",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": true,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "PM_AWAS", "SUKANYA_SAMRIDDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 12,
+    "profile": {
+      "name": "Siddharth Rao",
+      "age": 23,
+      "gender": "MALE",
+      "state": "Karnataka",
+      "annual_income_inr": 0,
+      "occupation": "STUDENT",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 13,
+    "profile": {
+      "name": "Suresh Gawande (Taxpayer Farmer)",
+      "age": 55,
+      "gender": "MALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 900000,
+      "occupation": "FARMER",
+      "landholding_acres": 8.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": true
+    },
+    "expected_eligible_codes": [],
+    "expected_ineligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 14,
+    "profile": {
+      "name": "Amina Khatun",
+      "age": 45,
+      "gender": "FEMALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 110000,
+      "occupation": "HOMEMAKER",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "PM_AWAS", "LADKI_BAHIN"],
+    "expected_ineligible_codes": ["PM_KISAN", "SUKANYA_SAMRIDDHI", "PM_SVANIDHI"]
+  },
+  {
+    "id": 15,
+    "profile": {
+      "name": "Raghavan Iyer",
+      "age": 70,
+      "gender": "MALE",
+      "state": "Tamil Nadu",
+      "annual_income_inr": 200000,
+      "occupation": "UNEMPLOYED",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 16,
+    "profile": {
+      "name": "Deepak Jadhav",
+      "age": 39,
+      "gender": "MALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 160000,
+      "occupation": "FARMER",
+      "landholding_acres": 1.5,
+      "owns_pucca_house": false,
+      "has_girl_child_under_10": true,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS", "SUKANYA_SAMRIDDHI"],
+    "expected_ineligible_codes": ["LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 17,
+    "profile": {
+      "name": "Meera Joshi",
+      "age": 19,
+      "gender": "FEMALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 50000,
+      "occupation": "STUDENT",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 18,
+    "profile": {
+      "name": "Kavita Shinde",
+      "age": 68,
+      "gender": "FEMALE",
+      "state": "Maharashtra",
+      "annual_income_inr": 100000,
+      "occupation": "HOMEMAKER",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  },
+  {
+    "id": 19,
+    "profile": {
+      "name": "Chhotu Lal",
+      "age": 41,
+      "gender": "MALE",
+      "state": "Gujarat",
+      "annual_income_inr": 110000,
+      "occupation": "STREET_VENDOR",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": false
+    },
+    "expected_eligible_codes": ["AYUSHMAN_BHARAT", "PM_SVANIDHI"],
+    "expected_ineligible_codes": ["PM_KISAN", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN"]
+  },
+  {
+    "id": 20,
+    "profile": {
+      "name": "Kiran Bedi",
+      "age": 55,
+      "gender": "FEMALE",
+      "state": "Haryana",
+      "annual_income_inr": 2000000,
+      "occupation": "GOVERNMENT_EMPLOYEE",
+      "landholding_acres": 0.0,
+      "owns_pucca_house": true,
+      "has_girl_child_under_10": false,
+      "is_income_tax_payer": true
+    },
+    "expected_eligible_codes": [],
+    "expected_ineligible_codes": ["PM_KISAN", "AYUSHMAN_BHARAT", "PM_AWAS", "SUKANYA_SAMRIDDHI", "LADKI_BAHIN", "PM_SVANIDHI"]
+  }
+]
