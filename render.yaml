@@ -13,3 +13,75 @@ services:
         value: mock
       - key: DATABASE_URL
         value: sqlite+aiosqlite:///./warrantywise.db
+
+  # Week 02 - ScamLens India
+  - type: web
+    name: scamlens-india-week02
+    env: python
+    buildCommand: pip install -r projects/week-02-scamlens-india/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-02-scamlens-india/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 03 - CivicProof
+  - type: web
+    name: civicproof-week03
+    env: python
+    buildCommand: pip install -r projects/week-03-civicproof/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-03-civicproof/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 04 - Voice2WorkOrder
+  - type: web
+    name: voice2workorder-week04
+    env: python
+    buildCommand: pip install -r projects/week-04-voice2workorder/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-04-voice2workorder/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 05 - SchemeSathi
+  - type: web
+    name: schemesathi-week05
+    env: python
+    buildCommand: pip install -r projects/week-05-schemesathi/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-05-schemesathi/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 06 - PackCheck
+  - type: web
+    name: packcheck-week06
+    env: python
+    buildCommand: pip install -r projects/week-06-packcheck/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-06-packcheck/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 07 - InjectionLab
+  - type: web
+    name: injectionlab-week07
+    env: python
+    buildCommand: pip install -r projects/week-07-injectionlab/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-07-injectionlab/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 08 - BillMatch
+  - type: web
+    name: billmatch-week08
+    env: python
+    buildCommand: pip install -r projects/week-08-billmatch/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-08-billmatch/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 09 - DiffGuard
+  - type: web
+    name: diffguard-week09
+    env: python
+    buildCommand: pip install -r projects/week-09-diffguard/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-09-diffguard/backend --host 0.0.0.0 --port $PORT
+    plan: free
+
+  # Week 10 - TenderLens
+  - type: web
+    name: tenderlens-week10
+    env: python
+    buildCommand: pip install -r projects/week-01-warrantywise/backend/requirements.txt
+    startCommand: uvicorn app.main:app --app-dir projects/week-10-tenderlens/backend --host 0.0.0.0 --port $PORT
+    plan: free
