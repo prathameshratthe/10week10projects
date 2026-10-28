@@ -11,16 +11,16 @@
 
 | Week | Date | Project | Problem & Core Value | Primary AI & Tech Pattern | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **30 Oct 2026** | **[WarrantyWise](./projects/week-01-warrantywise)** | People lose receipts and forget warranty/return deadlines | Document Intelligence, Multimodal Extraction, Schema Validation | 🟡 **In Progress (Active)** |
-| **02** | **06 Nov 2026** | **[ScamLens India](./projects/week-02-scamlens-india)** | Identifying suspicious messages, phishing payment links, QR scams | OCR, Deterministic Security Rules, LLM Explainability | ⚪ Scheduled |
-| **03** | **13 Nov 2026** | **[CivicProof](./projects/week-03-civicproof)** | Citizens struggle to document civic issues clearly and avoid duplicates | Vision Understanding, Geo-enrichment, Vector Similarity Search | ⚪ Scheduled |
-| **04** | **20 Nov 2026** | **[Voice2WorkOrder](./projects/week-04-voice2workorder)** | Small repair shops waste time converting unstructured voice notes | Multilingual Speech-to-Text (HI/MR/EN), Schema Extraction | ⚪ Scheduled |
-| **05** | **27 Nov 2026** | **[SchemeSathi](./projects/week-05-schemesathi)** | Navigating Indian welfare schemes and eligibility without hallucinations | Multilingual RAG, Hybrid Retrieval, Strict Source Grounding & Abstention | ⚪ Scheduled |
-| **06** | **04 Dec 2026** | **[PackCheck](./projects/week-06-packcheck)** | Businesses waste hours verifying vendor onboarding document packets | Multi-document Classification, Date Validation, Checklist Matching | ⚪ Scheduled |
-| **07** | **11 Dec 2026** | **[InjectionLab](./projects/week-07-injectionlab)** | LLM apps vulnerable to prompt injection, data leaks, and tool exploits | Red-teaming Harness, Security Assertions, Pytest/Promptfoo Evaluator | ⚪ Scheduled |
-| **08** | **18 Dec 2026** | **[BillMatch](./projects/week-08-billmatch)** | Small businesses struggle reconciling GST invoices with bank statements | Deterministic Reconciliation first, LLM Reranking for Ambiguous Records | ⚪ Scheduled |
-| **09** | **25 Dec 2026** | **[DiffGuard](./projects/week-09-diffguard)** | Code reviews miss subtle regression risks and missing test boundaries | Change-aware Code Analysis, AST/Diff Parsing, Regression Test Generation | ⚪ Scheduled |
-| **10** | **01 Jan 2027** | **[TenderLens](./projects/week-10-tenderlens)** | Small vendors overwhelmed by 100+ page public tender requirements | Long-document PDF Parsing, Page-grounded Retrieval, Structured Fact Extraction | ⚪ Scheduled |
+| **01** | **30 Oct 2026** | **[WarrantyWise](./projects/week-01-warrantywise)** | People lose receipts and forget warranty/return deadlines | Document Intelligence, Multimodal Extraction, Schema Validation | 🟢 **100% Complete** (100% Benchmark) |
+| **02** | **06 Nov 2026** | **[ScamLens India](./projects/week-02-scamlens-india)** | Identifying suspicious messages, phishing payment links, QR scams | OCR, Deterministic Security Rules, LLM Explainability | 🟢 **100% Complete** (100% Benchmark) |
+| **03** | **13 Nov 2026** | **[CivicProof](./projects/week-03-civicproof)** | Citizens struggle to document civic issues clearly and avoid duplicates | Vision Understanding, Geo-enrichment, Vector Deduplication | 🟢 **100% Complete** (100% Benchmark) |
+| **04** | **20 Nov 2026** | **[Voice2WorkOrder](./projects/week-04-voice2workorder)** | Small repair shops waste time converting unstructured voice notes | Multilingual Speech-to-Text (HI/MR/EN), Schema Extraction | 🟢 **100% Complete** (100% Benchmark) |
+| **05** | **27 Nov 2026** | **[SchemeSathi](./projects/week-05-schemesathi)** | Navigating Indian welfare schemes and eligibility without hallucinations | Multilingual RAG, Hybrid Retrieval, Strict Source Grounding & Abstention | 🟢 **100% Complete** (100% Benchmark) |
+| **06** | **04 Dec 2026** | **[PackCheck](./projects/week-06-packcheck)** | Businesses waste hours verifying vendor onboarding document packets | Multi-document Classification, PAN-in-GSTIN Cross-Check | 🟢 **100% Complete** (100% Benchmark) |
+| **07** | **11 Dec 2026** | **[InjectionLab](./projects/week-07-injectionlab)** | LLM apps vulnerable to prompt injection, data leaks, and tool exploits | Red-teaming Harness, Security Assertions, Multi-stage Defense | 🟢 **100% Complete** (100% Benchmark) |
+| **08** | **18 Dec 2026** | **[BillMatch](./projects/week-08-billmatch)** | Small businesses struggle reconciling GST invoices with bank statements | TDS Deduction Math (194C/194J), Bank Narration Matching | 🟢 **100% Complete** (100% Benchmark) |
+| **09** | **25 Dec 2026** | **[DiffGuard](./projects/week-09-diffguard)** | Code reviews miss subtle regression risks and missing test boundaries | Change-aware Code Analysis, AST/Diff Parsing, Test Impact Analysis | 🟢 **100% Complete** (100% Benchmark) |
+| **10** | **01 Jan 2027** | **[TenderLens](./projects/week-10-tenderlens)** | Small vendors overwhelmed by 100+ page public tender requirements | Long-document RFP Parsing, Page-grounded Citations, Fit Screener | 🟢 **100% Complete** (100% Benchmark) |
 
 ---
 
