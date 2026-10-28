@@ -1,0 +1,15 @@
+APPLE STORE #R102
+5th Avenue, New York, NY
+Date: 2026-03-10
+Invoice #: APL-992014
+
+MacBook Pro 16-inch M3   1   $2,499.00
+AppleCare+ Protection    1   $399.00
+
+Subtotal: $2,898.00
+Tax: $257.20
+Total: $3,155.20
+Payment: Apple Pay
+
+1 Year Manufacturer Limited Warranty
+14-day return policy with original box

@@ -1,0 +1,14 @@
+BARNES & NOBLE BOOKSELLERS
+Union Square, New York, NY
+Date: 2026-05-02
+Receipt: BN-390192
+
+Designing Data-Intensive Applications   $49.99
+System Design Interview Vol 1           $39.99
+Bookmark                                $2.50
+
+Sales Tax: $7.86
+Total: $100.34
+Payment: Apple Pay
+
+14 days return window with receipt

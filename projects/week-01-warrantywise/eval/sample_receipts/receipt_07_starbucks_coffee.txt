@@ -1,0 +1,14 @@
+STARBUCKS COFFEE #18204
+Seattle, WA
+Date: 2026-08-22
+Txn #: SB-20491
+
+Grande Caffe Latte         $5.45
+Blueberry Muffin           $3.75
+
+Subtotal: $9.20
+Tax: $0.92
+Total: $10.12
+Payment: Cash
+
+Have a great day!

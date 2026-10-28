@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "filename": "receipt_01_apple_macbook.txt",
+    "text": "APPLE STORE #R102\n5th Avenue, New York, NY\nDate: 2026-03-10\nInvoice #: APL-992014\n\nMacBook Pro 16-inch M3   1   $2,499.00\nAppleCare+ Protection    1   $399.00\n\nSubtotal: $2,898.00\nTax: $257.20\nTotal: $3,155.20\nPayment: Apple Pay\n\n1 Year Manufacturer Limited Warranty\n14-day return policy with original box",
+    "ground_truth": {
+      "merchant_name": "APPLE STORE #R102",
+      "purchase_date": "2026-03-10",
+      "total_amount": 3155.20,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 12,
+      "has_explicit_return_policy": true,
+      "return_window_days": 14
+    }
+  },
+  {
+    "id": 2,
+    "filename": "receipt_02_samsung_refrigerator.txt",
+    "text": "HOME DEPOT #4402\nAtlanta, GA\nDate: 2026-05-18\nOrder ID: HD-339102\n\nSamsung French Door Refrigerator   1   $1,899.00\nDelivery & Haul Away               1   $79.00\n\nSubtotal: $1,978.00\nSales Tax: $158.24\nTotal Amount: $2,136.24\nPayment: Credit Card\n\n2 Years Limited Warranty on parts and labor\n30-day return window from delivery date",
+    "ground_truth": {
+      "merchant_name": "HOME DEPOT #4402",
+      "purchase_date": "2026-05-18",
+      "total_amount": 2136.24,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 24,
+      "has_explicit_return_policy": true,
+      "return_window_days": 30
+    }
+  },
+  {
+    "id": 3,
+    "filename": "receipt_03_boat_earbuds_flipkart.txt",
+    "text": "FLIPKART INDIA PVT LTD\nBangalore, Karnataka\nDate: 15/07/2026\nInvoice No: FK-9988102\n\nboAt Airdopes 141 ANC       1   Rs. 1,499.00\nShipping Fee                1   Rs. 40.00\n\nGrand Total: ₹1,539.00\nPayment Mode: UPI\n\nWarranty: 1 Year brand warranty from invoice date\nReturns accepted within 7 days for defective items",
+    "ground_truth": {
+      "merchant_name": "FLIPKART INDIA PVT LTD",
+      "purchase_date": "2026-07-15",
+      "total_amount": 1539.00,
+      "currency": "INR",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 12,
+      "has_explicit_return_policy": true,
+      "return_window_days": 7
+    }
+  },
+  {
+    "id": 4,
+    "filename": "receipt_04_trader_joes_groceries.txt",
+    "text": "TRADER JOE'S #501\nPasadena, CA\nDate: 2026-06-04\nReceipt #: TJ-88210\n\nOrganic Bananas          $1.99\nAlmond Milk Unsweetened  $2.99\nSourdough Bread          $3.49\nAvocado 4-pack           $4.99\n\nTax: $0.00\nTotal: $13.46\nPayment: Debit Card\n\nThank you for shopping at Trader Joe's!",
+    "ground_truth": {
+      "merchant_name": "TRADER JOE'S #501",
+      "purchase_date": "2026-06-04",
+      "total_amount": 13.46,
+      "currency": "USD",
+      "has_explicit_warranty": false,
+      "warranty_duration_months": null,
+      "has_explicit_return_policy": false,
+      "return_window_days": null
+    }
+  },
+  {
+    "id": 5,
+    "filename": "receipt_05_zara_jacket.txt",
+    "text": "ZARA RETAIL\nOxford Street, London\nDate: 2026-09-12\nReceipt #: ZR-449102\n\nMen's Wool Blend Jacket    1   £129.00\nCotton Poplin Shirt        1   £45.99\n\nTotal Due: £174.99\nPayment: Contactless Visa\n\n30 days return policy with original tags attached.\nNo warranty applies to garments.",
+    "ground_truth": {
+      "merchant_name": "ZARA RETAIL",
+      "purchase_date": "2026-09-12",
+      "total_amount": 174.99,
+      "currency": "GBP",
+      "has_explicit_warranty": false,
+      "warranty_duration_months": null,
+      "has_explicit_return_policy": true,
+      "return_window_days": 30
+    }
+  },
+  {
+    "id": 6,
+    "filename": "receipt_06_reliance_oneplus.txt",
+    "text": "RELIANCE DIGITAL\nKurla West, Mumbai\nDate: 02/04/2026\nInvoice #: RD-889021\n\nOnePlus 12R 256GB Cool Blue   1   Rs. 42,999.00\nScreen Guard & Case           1   Rs. 999.00\n\nGrand Total: ₹43,998.00\nPayment: Credit Card\n\n1 Year Manufacturer Warranty on device\nReturn window: 15 days from date of purchase",
+    "ground_truth": {
+      "merchant_name": "RELIANCE DIGITAL",
+      "purchase_date": "2026-04-02",
+      "total_amount": 43998.00,
+      "currency": "INR",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 12,
+      "has_explicit_return_policy": true,
+      "return_window_days": 15
+    }
+  },
+  {
+    "id": 7,
+    "filename": "receipt_07_starbucks_coffee.txt",
+    "text": "STARBUCKS COFFEE #18204\nSeattle, WA\nDate: 2026-08-22\nTxn #: SB-20491\n\nGrande Caffe Latte         $5.45\nBlueberry Muffin           $3.75\n\nSubtotal: $9.20\nTax: $0.92\nTotal: $10.12\nPayment: Cash\n\nHave a great day!",
+    "ground_truth": {
+      "merchant_name": "STARBUCKS COFFEE #18204",
+      "purchase_date": "2026-08-22",
+      "total_amount": 10.12,
+      "currency": "USD",
+      "has_explicit_warranty": false,
+      "warranty_duration_months": null,
+      "has_explicit_return_policy": false,
+      "return_window_days": null
+    }
+  },
+  {
+    "id": 8,
+    "filename": "receipt_08_micro_center_monitor.txt",
+    "text": "MICRO CENTER #141\nCambridge, MA\nDate: 2026-01-20\nInvoice: MC-773019\n\nLG 34-Inch UltraWide Monitor   1   $499.99\nDisplayPort 2.1 Cable          1   $19.99\n\nSubtotal: $519.98\nTax: $32.50\nTotal: $552.48\nPayment: Master Card\n\n3 Years Manufacturer Warranty\n30-day return policy on computer monitors",
+    "ground_truth": {
+      "merchant_name": "MICRO CENTER #141",
+      "purchase_date": "2026-01-20",
+      "total_amount": 552.48,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 36,
+      "has_explicit_return_policy": true,
+      "return_window_days": 30
+    }
+  },
+  {
+    "id": 9,
+    "filename": "receipt_09_lowes_dewalt_drill.txt",
+    "text": "LOWE'S HOME IMPROVEMENT\nAustin, TX\nDate: 2026-04-11\nReceipt #: LW-908123\n\nDeWalt 20V Max Cordless Drill Kit   1   $159.00\nExtra Drill Bit Set 14pc            1   $24.98\n\nSales Tax: $15.18\nTotal: $199.16\nPayment: Visa\n\n5 Years Limited Warranty on drill tool\n90 days return window with valid receipt",
+    "ground_truth": {
+      "merchant_name": "LOWE'S HOME IMPROVEMENT",
+      "purchase_date": "2026-04-11",
+      "total_amount": 199.16,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 60,
+      "has_explicit_return_policy": true,
+      "return_window_days": 90
+    }
+  },
+  {
+    "id": 10,
+    "filename": "receipt_10_apollo_pharmacy.txt",
+    "text": "APOLLO PHARMACY\nConnaught Place, New Delhi\nDate: 29/05/2026\nBill No: AP-449102\n\nParacetamol 650mg Strip       1   Rs. 32.00\nVitamin C Tablets 60s         1   Rs. 240.00\nDigital Thermometer           1   Rs. 299.00\n\nTotal Amount: ₹571.00\nPayment: UPI\n\nReturns valid for 7 days with original seal unopened",
+    "ground_truth": {
+      "merchant_name": "APOLLO PHARMACY",
+      "purchase_date": "2026-05-29",
+      "total_amount": 571.00,
+      "currency": "INR",
+      "has_explicit_warranty": false,
+      "warranty_duration_months": null,
+      "has_explicit_return_policy": true,
+      "return_window_days": 7
+    }
+  },
+  {
+    "id": 11,
+    "filename": "receipt_11_ikea_sofa.txt",
+    "text": "IKEA FURNITURE\nBurbank, CA\nDate: 2026-02-14\nOrder #: IK-003912\n\nLandskrona 3-Seat Sofa   1   $799.00\nArmchair Cover           1   $49.00\n\nSubtotal: $848.00\nDelivery: $50.00\nTax: $71.84\nTotal: $969.84\nPayment: Credit Card\n\n10 Years Limited Warranty on frame and cushions\nReturns accepted within 90 days in clean condition",
+    "ground_truth": {
+      "merchant_name": "IKEA FURNITURE",
+      "purchase_date": "2026-02-14",
+      "total_amount": 969.84,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 120,
+      "has_explicit_return_policy": true,
+      "return_window_days": 90
+    }
+  },
+  {
+    "id": 12,
+    "filename": "receipt_12_bh_photo_sony_camera.txt",
+    "text": "B&H PHOTO VIDEO\n9th Avenue, New York, NY\nDate: 2026-07-04\nInvoice #: BH-887201\n\nSony Alpha 7 IV Mirrorless Body   1   $2,498.00\nSanDisk 128GB SD Card             2   $79.98\n\nSubtotal: $2,577.98\nTax: $229.44\nTotal: $2,807.42\nPayment: Amex\n\n2 Years Manufacturer Warranty included\n30-day return policy subject to inspection",
+    "ground_truth": {
+      "merchant_name": "B&H PHOTO VIDEO",
+      "purchase_date": "2026-07-04",
+      "total_amount": 2807.42,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 24,
+      "has_explicit_return_policy": true,
+      "return_window_days": 30
+    }
+  },
+  {
+    "id": 13,
+    "filename": "receipt_13_autozone_battery.txt",
+    "text": "AUTOZONE #1209\nDallas, TX\nDate: 2026-03-28\nTxn #: AZ-55410\n\nDuralast Gold Car Battery H6   1   $219.99\nCore Deposit Refund            1   -$22.00\nBattery Installation           1   $0.00\n\nState Tax: $16.33\nTotal: $214.32\nPayment: Debit Card\n\n3 Years Free Replacement Warranty\nReturn policy: 90 days with receipt",
+    "ground_truth": {
+      "merchant_name": "AUTOZONE #1209",
+      "purchase_date": "2026-03-28",
+      "total_amount": 214.32,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 36,
+      "has_explicit_return_policy": true,
+      "return_window_days": 90
+    }
+  },
+  {
+    "id": 14,
+    "filename": "receipt_14_barnes_and_noble_books.txt",
+    "text": "BARNES & NOBLE BOOKSELLERS\nUnion Square, New York, NY\nDate: 2026-05-02\nReceipt: BN-390192\n\nDesigning Data-Intensive Applications   $49.99\nSystem Design Interview Vol 1           $39.99\nBookmark                                $2.50\n\nSales Tax: $7.86\nTotal: $100.34\nPayment: Apple Pay\n\n14 days return window with receipt",
+    "ground_truth": {
+      "merchant_name": "BARNES & NOBLE BOOKSELLERS",
+      "purchase_date": "2026-05-02",
+      "total_amount": 100.34,
+      "currency": "USD",
+      "has_explicit_warranty": false,
+      "warranty_duration_months": null,
+      "has_explicit_return_policy": true,
+      "return_window_days": 14
+    }
+  },
+  {
+    "id": 15,
+    "filename": "receipt_15_vijay_sales_bravia.txt",
+    "text": "VIJAY SALES ELECTRONICS\nAndheri East, Mumbai\nDate: 18/06/2026\nInvoice #: VS-119024\n\nSony Bravia 65-Inch 4K OLED TV   1   Rs. 139,900.00\nWall Mount Bracket               1   Rs. 1,500.00\n\nGrand Total: ₹141,400.00\nPayment: HDFC Credit Card\n\nWarranty: 2 Years comprehensive manufacturer warranty\nReturns within 7 days for transit damage only",
+    "ground_truth": {
+      "merchant_name": "VIJAY SALES ELECTRONICS",
+      "purchase_date": "2026-06-18",
+      "total_amount": 141400.00,
+      "currency": "INR",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 24,
+      "has_explicit_return_policy": true,
+      "return_window_days": 7
+    }
+  },
+  {
+    "id": 16,
+    "filename": "receipt_16_mcdonalds_meal.txt",
+    "text": "MCDONALD'S RESTAURANT #4421\nChicago, IL\nDate: 2026-08-09\nOrder #: 92\n\nBig Mac Meal Medium       1   $9.89\n10pc Chicken McNuggets    1   $5.49\nApple Pie                 1   $1.79\n\nSubtotal: $17.17\nTax: $1.80\nTotal: $18.97\nPayment: Cash",
+    "ground_truth": {
+      "merchant_name": "MCDONALD'S RESTAURANT #4421",
+      "purchase_date": "2026-08-09",
+      "total_amount": 18.97,
+      "currency": "USD",
+      "has_explicit_warranty": false,
+      "warranty_duration_months": null,
+      "has_explicit_return_policy": false,
+      "return_window_days": null
+    }
+  },
+  {
+    "id": 17,
+    "filename": "receipt_17_gamestop_ps5.txt",
+    "text": "GAMESTOP STORE #3104\nDenver, CO\nDate: 2026-04-25\nInvoice: GS-889012\n\nPlayStation 5 Slim Console   1   $499.99\nDualSense Controller         1   $69.99\n\nSubtotal: $569.98\nTax: $46.17\nTotal: $616.15\nPayment: Credit Card\n\n1 Year Limited Manufacturer Warranty\n30-day return policy for unopened items",
+    "ground_truth": {
+      "merchant_name": "GAMESTOP STORE #3104",
+      "purchase_date": "2026-04-25",
+      "total_amount": 616.15,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 12,
+      "has_explicit_return_policy": true,
+      "return_window_days": 30
+    }
+  },
+  {
+    "id": 18,
+    "filename": "receipt_18_herman_miller_chair.txt",
+    "text": "HERMAN MILLER STORE\nSan Francisco, CA\nDate: 2026-03-01\nOrder ID: HM-449102\n\nAeron Chair Size B Fully Loaded   1   $1,440.00\nHard Floor Castors                1   $45.00\n\nSales Tax: $126.23\nTotal: $1,611.23\nPayment: Visa ending 1092\n\n12 Years Manufacturer Warranty on parts and mechanism\n30-day return policy with free return shipping",
+    "ground_truth": {
+      "merchant_name": "HERMAN MILLER STORE",
+      "purchase_date": "2026-03-01",
+      "total_amount": 1611.23,
+      "currency": "USD",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 144,
+      "has_explicit_return_policy": true,
+      "return_window_days": 30
+    }
+  },
+  {
+    "id": 19,
+    "filename": "receipt_19_philips_sonicare.txt",
+    "text": "PHILIPS DIRECT ONLINE\nAmsterdam, Netherlands\nDate: 2026-06-15\nOrder: PH-990142\n\nSonicare DiamondClean 9000   1   €189.99\nReplacement Brush Heads 4pk  1   €29.99\n\nSubtotal: €219.98\nVAT (21%): €46.20\nTotal: €266.18\nPayment: iDeal\n\n2 Years Worldwide Warranty\n60 days money-back guarantee",
+    "ground_truth": {
+      "merchant_name": "PHILIPS DIRECT ONLINE",
+      "purchase_date": "2026-06-15",
+      "total_amount": 266.18,
+      "currency": "EUR",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 24,
+      "has_explicit_return_policy": true,
+      "return_window_days": 60
+    }
+  },
+  {
+    "id": 20,
+    "filename": "receipt_20_lenskart_glasses.txt",
+    "text": "LENSKART OPTICALS\nIndiranagar, Bangalore\nDate: 10/05/2026\nInvoice: LK-889210\n\nVincent Chase Titanium Frame   1   Rs. 2,500.00\nBlu-Cut Anti-Glare Lenses      1   Rs. 1,500.00\n\nGrand Total: ₹4,000.00\nPayment: UPI (Paytm)\n\nWarranty: 1 Year warranty on frame and lens coating\nReturns accepted within 14 days for exchange or refund",
+    "ground_truth": {
+      "merchant_name": "LENSKART OPTICALS",
+      "purchase_date": "2026-05-10",
+      "total_amount": 4000.00,
+      "currency": "INR",
+      "has_explicit_warranty": true,
+      "warranty_duration_months": 12,
+      "has_explicit_return_policy": true,
+      "return_window_days": 14
+    }
+  }
+]

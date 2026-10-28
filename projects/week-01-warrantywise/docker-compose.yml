@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  warrantywise:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - AI_PROVIDER=mock
+      - DATABASE_URL=sqlite+aiosqlite:///./warrantywise.db
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - warrantywise_data:/app/backend/uploads
+    restart: unless-stopped
+
+volumes:
+  warrantywise_data:
