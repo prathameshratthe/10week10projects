@@ -149,7 +149,7 @@ export default function App() {
             </span>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                Voice2WorkOrder <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40">Week 04</span>
+                Voice2WorkOrder <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40 font-mono">Multilingual Dictation</span>
               </h1>
               <p className="text-sm text-slate-400">
                 Multilingual Speech & Audio Dictation to Commercial Work Orders & Itemized Job Cards

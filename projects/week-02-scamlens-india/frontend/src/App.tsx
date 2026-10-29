@@ -100,8 +100,8 @@ export const App: React.FC = () => {
                 <h1 className="text-xl font-bold font-display tracking-tight text-white">
                   ScamLens India
                 </h1>
-                <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                  Week 02 MVP
+                <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">
+                  Real-Time Radar
                 </span>
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">

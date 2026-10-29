@@ -109,7 +109,7 @@ export default function App() {
             </span>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                InjectionLab <span className="text-xs px-2.5 py-0.5 rounded-full bg-red-500/20 text-red-300 border border-red-500/40">Week 07</span>
+                InjectionLab <span className="text-xs px-2.5 py-0.5 rounded-full bg-red-500/20 text-red-300 border border-red-500/40 font-mono">Security Harness</span>
               </h1>
               <p className="text-sm text-slate-400">
                 Adversarial Prompt Injection Red-Teaming, Canary Leak Defense & Security Evaluation Harness

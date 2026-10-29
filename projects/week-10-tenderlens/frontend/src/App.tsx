@@ -640,7 +640,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-800 py-3 bg-slate-900/40 text-center text-xs text-slate-500">
-        TenderLens Public Procurement AI • Week 10 of 10-Week AI Builder Challenge • Automated Page Citation Grounding Engine
+        TenderLens Public Procurement Intelligence • Automated Page Citation Grounding & Eligibility Screener
       </footer>
     </div>
   );

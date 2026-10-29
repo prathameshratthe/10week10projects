@@ -9,22 +9,23 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
+          50: '#f0f7ff',
+          100: '#e0effe',
+          500: '#2563eb',
+          600: '#1d4ed8',
+          700: '#1e40af',
         },
-        surface: {
-          dark: '#0f172a',
-          card: '#1e293b',
-          border: '#334155',
-          hover: '#2d3748',
+        obsidian: {
+          bg: '#090A0F',
+          card: '#0E121B',
+          raised: '#141A26',
+          border: 'rgba(255, 255, 255, 0.08)',
+          borderHover: 'rgba(255, 255, 255, 0.16)',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Outfit', 'Inter', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'Inter', '-apple-system', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       }
     },
   },

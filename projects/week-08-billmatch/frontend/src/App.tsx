@@ -220,7 +220,7 @@ export default function App() {
             </span>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                BillMatch <span className="text-xs px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/40">Week 08</span>
+                BillMatch <span className="text-xs px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/40 font-mono">AP Automation</span>
               </h1>
               <p className="text-sm text-slate-400">
                 Deterministic GST Tax Invoice to Bank Statement Reconciliation & TDS Accounting Engine

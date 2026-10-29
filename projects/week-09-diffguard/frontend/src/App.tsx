@@ -168,7 +168,7 @@ export default function App() {
             </span>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                DiffGuard <span className="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/40">Week 09</span>
+                DiffGuard <span className="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/40 font-mono">CI Sentinel</span>
               </h1>
               <p className="text-sm text-slate-400">
                 Change-Aware Git Diff Blast Radius & CI Test Impact Analyzer

@@ -308,7 +308,7 @@ export default function App() {
             </span>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                SchemeSathi <span className="text-xs px-2.5 py-0.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/40">Week 05</span>
+                SchemeSathi <span className="text-xs px-2.5 py-0.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/40 font-mono">Gazette Grounded</span>
               </h1>
               <p className="text-sm text-slate-400">
                 Official Gazette-Grounded Indian Welfare Eligibility & Citation Navigator

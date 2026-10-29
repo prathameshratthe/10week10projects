@@ -103,7 +103,7 @@ export const App: React.FC = () => {
   const expiringReturnsCount = stats?.expiring_soon_returns || 0;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen bg-[#090A0F] text-zinc-100 flex flex-col selection:bg-blue-500 selection:text-white antialiased">
       {/* Navbar */}
       <Navbar
         onOpenUpload={() => setIsUploaderOpen(true)}
@@ -111,27 +111,27 @@ export const App: React.FC = () => {
         recordCount={stats?.total_records || 0}
       />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Expiring Alert Banner (if urgent deadlines exist) */}
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-7">
+        {/* Urgent Deadlines Banner (if applicable) */}
         {(expiringSoonCount > 0 || expiringReturnsCount > 0) && (
-          <div className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-amber-950/40 via-slate-900/80 to-rose-950/40 border border-amber-500/30 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-xl bg-amber-500/20 text-amber-400 shrink-0">
-                <AlertTriangle className="w-5 h-5" />
+          <div className="mb-6 p-3.5 rounded-xl bg-amber-950/25 border border-amber-500/25 flex items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+                <AlertTriangle className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white">Action Required: Deadlines Approaching</h4>
-                <p className="text-xs text-slate-400">
-                  {expiringSoonCount > 0 && `${expiringSoonCount} warranty coverage expiring within 30 days. `}
-                  {expiringReturnsCount > 0 && `${expiringReturnsCount} return window closing in 7 days!`}
-                </p>
+                <span className="font-semibold text-white">Action Required: Deadlines Approaching — </span>
+                <span className="text-zinc-300">
+                  {expiringSoonCount > 0 && `${expiringSoonCount} warranty expiring within 30 days. `}
+                  {expiringReturnsCount > 0 && `${expiringReturnsCount} return window closing soon!`}
+                </span>
               </div>
             </div>
             <button
               onClick={() => setSelectedWarrantyStatus('EXPIRING_SOON')}
-              className="hidden sm:flex items-center gap-1 text-xs font-semibold text-amber-400 hover:text-amber-300"
+              className="flex items-center gap-1 font-semibold text-amber-400 hover:text-amber-300 transition-colors shrink-0 cursor-pointer"
             >
-              <span>View Expiring</span>
+              <span>Review Deadlines</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -155,37 +155,37 @@ export const App: React.FC = () => {
 
         {/* Records Listing */}
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-64 rounded-2xl bg-slate-900/50 border border-slate-800 animate-pulse"
+                className="h-56 rounded-xl bg-zinc-900/40 border border-white/[0.05] animate-pulse"
               />
             ))}
           </div>
         ) : records.length === 0 ? (
           /* Empty State */
-          <div className="p-12 text-center rounded-3xl border border-dashed border-slate-800 bg-slate-900/20 my-8 flex flex-col items-center">
-            <div className="w-16 h-16 rounded-3xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
-              <Inbox className="w-8 h-8" />
+          <div className="p-12 text-center rounded-2xl border border-dashed border-white/[0.1] bg-zinc-950/40 my-8 flex flex-col items-center">
+            <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-white/10 text-zinc-400 flex items-center justify-center mb-3">
+              <Inbox className="w-6 h-6 text-zinc-400" />
             </div>
-            <h3 className="text-lg font-bold font-display text-white">No Purchase Records Found</h3>
-            <p className="text-xs text-slate-400 max-w-sm mt-1 mb-6">
+            <h3 className="text-sm font-bold text-white tracking-tight">No Purchase Records Cataloged</h3>
+            <p className="text-xs text-zinc-400 max-w-sm mt-1 mb-5">
               {search || selectedCategory !== 'ALL' || selectedWarrantyStatus !== 'ALL'
                 ? 'No records match your active search and filter criteria.'
-                : 'Your warranty vault is currently empty. Upload your first store receipt to automatically extract and track warranty terms.'}
+                : 'Your warranty vault is currently empty. Protect your first store receipt to track manufacturer warranties and return windows.'}
             </p>
             <button
               onClick={() => setIsUploaderOpen(true)}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/20 transition-all transform active:scale-95"
+              className="btn-primary flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold cursor-pointer"
             >
-              <Plus className="w-4 h-4" />
-              <span>Extract First Receipt</span>
+              <Plus className="w-4 h-4 stroke-[2.5]" />
+              <span>Protect First Receipt</span>
             </button>
           </div>
         ) : viewMode === 'grid' ? (
           /* Grid View */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
             {records.map((record) => (
               <RecordCard
                 key={record.id}
@@ -206,10 +206,10 @@ export const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500 mt-12">
+      <footer className="border-t border-white/[0.06] py-6 text-center text-xs text-zinc-500 mt-12 bg-zinc-950/40">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>WarrantyWise • 10-Week AI Builder Challenge (Week 01)</span>
-          <span>Zero Hallucination Guarantee • Tested on 20 Ground Truth Samples</span>
+          <span>WarrantyWise — Intelligent Consumer Warranty Vault & Protection Platform</span>
+          <span className="font-mono text-[11px] text-zinc-500">Deterministic Extraction Standard • 20 Ground Truth Samples Verified</span>
         </div>
       </footer>
 

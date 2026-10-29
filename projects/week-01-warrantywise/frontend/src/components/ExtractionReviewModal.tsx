@@ -183,84 +183,86 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
-      <div className="glass-panel-elevated w-full max-w-4xl rounded-3xl p-6 sm:p-8 my-8 max-h-[90vh] flex flex-col relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto animate-in fade-in duration-150">
+      <div className="bg-[#0e121b] border border-white/10 w-full max-w-4xl rounded-2xl p-6 sm:p-7 my-8 max-h-[90vh] flex flex-col relative shadow-2xl">
         {/* Modal Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-slate-800 shrink-0">
+        <div className="flex items-center justify-between pb-4 border-b border-white/[0.07] shrink-0">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-2xl bg-blue-500/10 text-blue-400">
-              <FileCheck className="w-6 h-6" />
+            <div className="w-9 h-9 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-300">
+              <FileCheck className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-xl font-bold font-display text-white">
-                  Review & Verify Extraction
+                <h2 className="text-base font-bold text-white tracking-tight">
+                  Verify Extracted Record
                 </h2>
-                <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span className="px-2 py-0.5 text-[11px] font-mono font-medium rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                   {Math.round(extractedData.confidence_score * 100)}% Confidence
                 </span>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono rounded bg-slate-800 text-slate-400">
+                <span className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono rounded bg-white/[0.05] text-zinc-400 border border-white/[0.06]">
                   {extractedData.extraction_method}
                 </span>
               </div>
-              <p className="text-xs text-slate-400 mt-0.5">
-                Ensure all details are accurate before cataloging into your warranty vault
+              <p className="text-xs text-zinc-400 mt-0.5">
+                Review parsed financial amounts, dates, and explicit protection clauses before vaulting
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 transition-colors"
+            className="p-1.5 text-zinc-400 hover:text-white rounded-lg hover:bg-zinc-800 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Tab switcher */}
-        <div className="flex items-center gap-2 pt-4 shrink-0">
-          <button
-            type="button"
-            onClick={() => setActiveTab('form')}
-            className={`px-4 py-1.5 text-xs font-semibold rounded-xl transition-colors ${
-              activeTab === 'form'
-                ? 'bg-blue-600 text-white shadow-sm'
-                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
-            }`}
-          >
-            Structured Review Form
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('rawText')}
-            className={`px-4 py-1.5 text-xs font-semibold rounded-xl transition-colors ${
-              activeTab === 'rawText'
-                ? 'bg-blue-600 text-white shadow-sm'
-                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
-            }`}
-          >
-            Document OCR Text ({extractedData.raw_text?.length || 0} chars)
-          </button>
+        {/* Tab switcher - Linear Segmented Control */}
+        <div className="flex items-center gap-1.5 pt-4 shrink-0">
+          <div className="inline-flex p-0.5 rounded-lg bg-zinc-950/80 border border-white/[0.07]">
+            <button
+              type="button"
+              onClick={() => setActiveTab('form')}
+              className={`px-3 py-1 text-xs font-medium rounded-md transition-all cursor-pointer ${
+                activeTab === 'form'
+                  ? 'bg-white text-zinc-950 shadow-sm'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              Structured Fields
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab('rawText')}
+              className={`px-3 py-1 text-xs font-medium rounded-md transition-all cursor-pointer ${
+                activeTab === 'rawText'
+                  ? 'bg-white text-zinc-950 shadow-sm'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              Raw Document Text ({extractedData.raw_text?.length || 0} chars)
+            </button>
+          </div>
         </div>
 
         {/* Modal Body */}
-        <div className="overflow-y-auto pr-1 mt-4 space-y-6 flex-1">
+        <div className="overflow-y-auto pr-1 mt-4 space-y-5 flex-1">
           {activeTab === 'rawText' ? (
-            <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 font-mono text-xs text-slate-300 whitespace-pre-wrap leading-relaxed max-h-[60vh] overflow-y-auto">
+            <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] font-mono text-xs text-zinc-300 whitespace-pre-wrap leading-relaxed max-h-[55vh] overflow-y-auto">
               {extractedData.raw_text || '[No raw text extracted]'}
             </div>
           ) : (
-            <form id="extraction-form" onSubmit={handleSave} className="space-y-6">
+            <form id="extraction-form" onSubmit={handleSave} className="space-y-4">
               {/* Primary Merchant & Payment Details */}
-              <div className="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/80 space-y-4">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-                  <Store className="w-3.5 h-3.5 text-blue-400" />
-                  <span>Store & Financial Transaction</span>
-                </h3>
+              <div className="p-4 rounded-xl bg-zinc-950/50 border border-white/[0.06] space-y-3.5">
+                <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                  <Store className="w-3.5 h-3.5 text-zinc-400" />
+                  <span>Store & Financial Details</span>
+                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {/* Merchant Name */}
                   <div className="lg:col-span-2">
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                       Store / Merchant Name *
                     </label>
                     <input
@@ -268,17 +270,17 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                       required
                       value={merchantName}
                       onChange={(e) => setMerchantName(e.target.value)}
-                      className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                     />
                   </div>
 
                   {/* Category */}
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">Category</label>
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">Category</label>
                     <select
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
-                      className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                     >
                       <option value="Electronics">Electronics</option>
                       <option value="Home Appliances">Home Appliances</option>
@@ -293,45 +295,41 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
 
                   {/* Purchase Date */}
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                       Purchase Date (YYYY-MM-DD) *
                     </label>
-                    <div className="relative">
-                      <input
-                        type="date"
-                        required
-                        value={purchaseDate}
-                        onChange={(e) => setPurchaseDate(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
-                      />
-                    </div>
+                    <input
+                      type="date"
+                      required
+                      value={purchaseDate}
+                      onChange={(e) => setPurchaseDate(e.target.value)}
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
+                    />
                   </div>
 
                   {/* Total Amount */}
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                       Total Amount *
                     </label>
-                    <div className="relative">
-                      <input
-                        type="number"
-                        step="0.01"
-                        min="0"
-                        required
-                        value={totalAmount}
-                        onChange={(e) => setTotalAmount(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
-                      />
-                    </div>
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="0"
+                      required
+                      value={totalAmount}
+                      onChange={(e) => setTotalAmount(e.target.value)}
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
+                    />
                   </div>
 
                   {/* Currency */}
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">Currency</label>
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">Currency</label>
                     <select
                       value={currency}
                       onChange={(e) => setCurrency(e.target.value)}
-                      className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                     >
                       <option value="USD">USD ($)</option>
                       <option value="INR">INR (₹)</option>
@@ -342,7 +340,7 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
 
                   {/* Invoice # */}
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                       Invoice / Receipt #
                     </label>
                     <input
@@ -350,13 +348,13 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                       value={invoiceNumber}
                       onChange={(e) => setInvoiceNumber(e.target.value)}
                       placeholder="e.g. INV-10492"
-                      className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
                     />
                   </div>
 
                   {/* Payment Method */}
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1">
+                    <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                       Payment Method
                     </label>
                     <input
@@ -364,7 +362,7 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                       value={paymentMethod}
                       onChange={(e) => setPaymentMethod(e.target.value)}
                       placeholder="Credit Card, UPI, etc."
-                      className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                      className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                     />
                   </div>
                 </div>
@@ -372,23 +370,23 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
 
               {/* Warranty Clause Section (Strictly Explicit) */}
               <div
-                className={`p-5 rounded-2xl border transition-all ${
+                className={`p-4 rounded-xl border transition-all ${
                   hasWarranty
-                    ? 'bg-blue-950/20 border-blue-500/40 shadow-sm shadow-blue-500/10'
-                    : 'bg-slate-900/30 border-slate-800'
+                    ? 'bg-blue-950/20 border-blue-500/30'
+                    : 'bg-zinc-950/40 border-white/[0.06]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
                     {hasWarranty ? (
-                      <ShieldCheck className="w-5 h-5 text-blue-400" />
+                      <ShieldCheck className="w-4 h-4 text-emerald-400" />
                     ) : (
-                      <ShieldAlert className="w-5 h-5 text-slate-500" />
+                      <ShieldAlert className="w-4 h-4 text-zinc-500" />
                     )}
                     <div>
-                      <h3 className="text-sm font-bold text-white">Explicit Warranty Protection</h3>
-                      <p className="text-xs text-slate-400">
-                        Zero Hallucination: Enabled only if explicitly printed on the document
+                      <h3 className="text-xs font-bold text-white tracking-tight">Explicit Warranty Protection</h3>
+                      <p className="text-[11px] text-zinc-400">
+                        Zero Hallucination: Enabled only when explicitly documented on the receipt
                       </p>
                     </div>
                   </div>
@@ -400,14 +398,14 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                       onChange={(e) => setHasWarranty(e.target.checked)}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    <div className="w-9 h-5 bg-zinc-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-white peer-checked:after:bg-zinc-950"></div>
                   </label>
                 </div>
 
                 {hasWarranty ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 border-t border-slate-800/80">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-white/[0.06]">
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1">
+                      <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                         Warranty Duration (Months)
                       </label>
                       <input
@@ -416,24 +414,24 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                         value={warrantyMonths}
                         onChange={(e) => handleMonthsChange(e.target.value)}
                         placeholder="e.g. 12 or 24"
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                        className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1">
+                      <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                         Warranty Expiration Date
                       </label>
                       <input
                         type="date"
                         value={warrantyEndDate}
                         onChange={(e) => setWarrantyEndDate(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                        className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1">
+                      <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                         Warranty Terms & Notes
                       </label>
                       <input
@@ -441,31 +439,31 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                         value={warrantyNotes}
                         onChange={(e) => setWarrantyNotes(e.target.value)}
                         placeholder="e.g. 1-Yr Limited Manufacturer"
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                        className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                       />
                     </div>
                   </div>
                 ) : (
-                  <div className="text-xs text-slate-500 italic pt-2">
-                    No warranty clause was found printed on this receipt. Toggle switch if you have external documentation.
+                  <div className="text-[11px] text-zinc-500 italic pt-1">
+                    No warranty clause was found printed on this receipt.
                   </div>
                 )}
               </div>
 
               {/* Return Policy Section */}
               <div
-                className={`p-5 rounded-2xl border transition-all ${
+                className={`p-4 rounded-xl border transition-all ${
                   hasReturn
-                    ? 'bg-rose-950/20 border-rose-500/40 shadow-sm shadow-rose-500/10'
-                    : 'bg-slate-900/30 border-slate-800'
+                    ? 'bg-amber-950/20 border-amber-500/30'
+                    : 'bg-zinc-950/40 border-white/[0.06]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <Clock className={`w-5 h-5 ${hasReturn ? 'text-rose-400' : 'text-slate-500'}`} />
+                    <Clock className={`w-4 h-4 ${hasReturn ? 'text-amber-400' : 'text-zinc-500'}`} />
                     <div>
-                      <h3 className="text-sm font-bold text-white">Return & Exchange Window</h3>
-                      <p className="text-xs text-slate-400">
+                      <h3 className="text-xs font-bold text-white tracking-tight">Return & Exchange Window</h3>
+                      <p className="text-[11px] text-zinc-400">
                         Tracks countdown for full refund or replacement eligibility
                       </p>
                     </div>
@@ -478,14 +476,14 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                       onChange={(e) => setHasReturn(e.target.checked)}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-rose-600"></div>
+                    <div className="w-9 h-5 bg-zinc-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-white peer-checked:after:bg-zinc-950"></div>
                   </label>
                 </div>
 
                 {hasReturn ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 border-t border-slate-800/80">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-white/[0.06]">
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1">
+                      <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                         Return Window (Days)
                       </label>
                       <input
@@ -494,24 +492,24 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                         value={returnDays}
                         onChange={(e) => handleDaysChange(e.target.value)}
                         placeholder="e.g. 14 or 30"
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-rose-500"
+                        className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1">
+                      <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                         Last Return Date
                       </label>
                       <input
                         type="date"
                         value={returnDeadline}
                         onChange={(e) => setReturnDeadline(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-rose-500"
+                        className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white font-mono focus:outline-none focus:border-white/30 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1">
+                      <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                         Return Policy Conditions
                       </label>
                       <input
@@ -519,27 +517,27 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                         value={returnNotes}
                         onChange={(e) => setReturnNotes(e.target.value)}
                         placeholder="e.g. Original box and receipt required"
-                        className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-rose-500"
+                        className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                       />
                     </div>
                   </div>
                 ) : (
-                  <div className="text-xs text-slate-500 italic pt-2">
+                  <div className="text-[11px] text-zinc-500 italic pt-1">
                     No explicit return policy was stated on this receipt.
                   </div>
                 )}
               </div>
 
               {/* Line Items Editor */}
-              <div className="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/80">
+              <div className="p-4 rounded-xl bg-zinc-950/50 border border-white/[0.06]">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Extracted Purchased Items ({items.length})
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                    Purchased Items ({items.length})
                   </h3>
                   <button
                     type="button"
                     onClick={handleAddItem}
-                    className="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
+                    className="flex items-center gap-1 text-xs text-zinc-300 hover:text-white transition-colors cursor-pointer"
                   >
                     <Plus className="w-3.5 h-3.5" />
                     <span>Add Item</span>
@@ -547,22 +545,22 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                 </div>
 
                 {items.length === 0 ? (
-                  <p className="text-xs text-slate-500 italic py-2">
-                    No line items extracted. Click 'Add Item' to record purchased items.
+                  <p className="text-xs text-zinc-500 italic py-1">
+                    No individual line items parsed. Click 'Add Item' to record specific products.
                   </p>
                 ) : (
-                  <div className="space-y-2 max-h-48 overflow-y-auto">
+                  <div className="space-y-2 max-h-44 overflow-y-auto pr-1">
                     {items.map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2 p-2 rounded-xl bg-slate-950/60 border border-slate-800"
+                        className="flex items-center gap-2 p-2 rounded-lg bg-[#090A0F] border border-white/[0.08]"
                       >
                         <input
                           type="text"
                           value={item.name}
                           onChange={(e) => handleItemChange(idx, 'name', e.target.value)}
-                          placeholder="Item name"
-                          className="flex-1 px-2.5 py-1.5 text-xs rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-blue-500"
+                          placeholder="Item description"
+                          className="flex-1 px-2.5 py-1 text-xs rounded bg-zinc-900 border border-white/10 text-white focus:outline-none focus:border-white/30"
                         />
                         <input
                           type="number"
@@ -572,7 +570,7 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                             handleItemChange(idx, 'quantity', parseInt(e.target.value, 10) || 1)
                           }
                           placeholder="Qty"
-                          className="w-16 px-2 py-1.5 text-xs rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none"
+                          className="w-14 px-2 py-1 text-xs rounded bg-zinc-900 border border-white/10 text-white font-mono focus:outline-none"
                         />
                         <input
                           type="number"
@@ -583,12 +581,12 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                             handleItemChange(idx, 'total_price', parseFloat(e.target.value) || 0)
                           }
                           placeholder="Price"
-                          className="w-24 px-2 py-1.5 text-xs rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none"
+                          className="w-20 px-2 py-1 text-xs rounded bg-zinc-900 border border-white/10 text-white font-mono focus:outline-none"
                         />
                         <button
                           type="button"
                           onClick={() => handleRemoveItem(idx)}
-                          className="p-1.5 text-slate-400 hover:text-rose-400 rounded-lg hover:bg-slate-800 transition-colors"
+                          className="p-1 text-zinc-500 hover:text-rose-400 rounded transition-colors cursor-pointer"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
                         </button>
@@ -600,7 +598,7 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
 
               {/* Personal Notes */}
               <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">
+                <label className="block text-[11px] font-medium text-zinc-400 mb-1">
                   Private Notes / Serial Number (Optional)
                 </label>
                 <textarea
@@ -608,7 +606,7 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="e.g. Serial: SN-9948210, kept original box in garage attic"
-                  className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-blue-500"
+                  className="w-full px-3 py-2 rounded-lg bg-[#090A0F] border border-white/10 text-xs text-white focus:outline-none focus:border-white/30 transition-colors"
                 />
               </div>
             </form>
@@ -616,17 +614,17 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="pt-4 border-t border-slate-800 flex items-center justify-between shrink-0 mt-4">
-          <p className="text-xs text-slate-500 hidden sm:block">
-            Records are persisted to local SQLite database
+        <div className="pt-4 border-t border-white/[0.07] flex items-center justify-between shrink-0 mt-4">
+          <p className="text-[11px] text-zinc-500 hidden sm:block">
+            Strict verification protects your claim proof accuracy
           </p>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
             <button
               type="button"
               onClick={onClose}
               disabled={saving}
-              className="px-4 py-2 rounded-xl text-sm font-medium text-slate-300 hover:bg-slate-800 transition-colors"
+              className="px-3.5 py-1.5 rounded-lg text-xs font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
             >
               Discard
             </button>
@@ -634,9 +632,9 @@ export const ExtractionReviewModal: React.FC<ExtractionReviewModalProps> = ({
               type="submit"
               form="extraction-form"
               disabled={saving}
-              className="flex items-center gap-2 px-6 py-2 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-md shadow-blue-500/20 disabled:opacity-50 transition-all"
+              className="btn-primary flex items-center gap-1.5 px-5 py-2 rounded-lg text-xs font-semibold cursor-pointer disabled:opacity-50"
             >
-              {saving ? 'Saving to Vault...' : 'Save Purchase Record'}
+              {saving ? 'Cataloging...' : 'Save to Vault'}
             </button>
           </div>
         </div>

@@ -211,7 +211,7 @@ export default function App() {
               </span>
               <div>
                 <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                  CivicProof <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">Week 03</span>
+                  CivicProof <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-mono">Civic Intelligence</span>
                 </h1>
                 <p className="text-sm text-slate-400">
                   AI Civic Grievance Triage & Deduplication Engine for Municipal Corporations

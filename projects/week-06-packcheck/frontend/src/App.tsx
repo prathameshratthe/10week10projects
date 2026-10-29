@@ -293,7 +293,7 @@ export default function App() {
             </span>
             <div>
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                PackCheck <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">Week 06</span>
+                PackCheck <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 font-mono">Enterprise Compliance</span>
               </h1>
               <p className="text-sm text-slate-400">
                 Automated B2B Vendor Onboarding Compliance & Cross-Entity Verification Engine
