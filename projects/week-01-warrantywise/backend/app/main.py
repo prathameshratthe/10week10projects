@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from app.api.router import api_router
 from app.core.config import get_settings
-from app.core.database import init_db
+from app.core.database import init_db, AsyncSessionLocal
 
 settings = get_settings()
 
@@ -17,13 +17,21 @@ async def lifespan(app: FastAPI):
     upload_dir = Path(settings.UPLOAD_DIR)
     upload_dir.mkdir(parents=True, exist_ok=True)
     await init_db()
+
+    # Auto-seed enterprise demo assets if database is empty
+    try:
+        from app.services.seed_service import seed_initial_data_if_empty
+        async with AsyncSessionLocal() as session:
+            await seed_initial_data_if_empty(session)
+    except Exception as e:
+        print(f"Warning: demo seeding skipped: {e}")
+
     yield
-    # Shutdown logic (if any)
 
 
 app = FastAPI(
-    title="WarrantyWise API",
-    description="Receipt extraction and warranty/return tracker backend. Week 1 of 10-Week AI Builder Challenge.",
+    title="WarrantyWise Enterprise API",
+    description="Intelligent consumer warranty, return deadline, and verified claim vault platform.",
     version="1.0.0",
     lifespan=lifespan,
 )

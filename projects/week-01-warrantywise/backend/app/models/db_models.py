@@ -9,6 +9,19 @@ def utc_now() -> datetime:
     return datetime.now(timezone.utc)
 
 
+class User(Base):
+    __tablename__ = "users"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    email: Mapped[str] = mapped_column(String(255), unique=True, index=True, nullable=False)
+    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    full_name: Mapped[str] = mapped_column(String(255), nullable=False)
+    organization_name: Mapped[str] = mapped_column(String(255), default="Enterprise Vault", nullable=False)
+    role: Mapped[str] = mapped_column(String(50), default="Administrator", nullable=False)
+    api_key: Mapped[Optional[str]] = mapped_column(String(100), unique=True, index=True, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utc_now, nullable=False)
+
+
 class PurchaseRecord(Base):
     __tablename__ = "purchase_records"
 
@@ -46,6 +59,9 @@ class PurchaseRecord(Base):
     items: Mapped[List["ReceiptItem"]] = relationship(
         "ReceiptItem", back_populates="record", cascade="all, delete-orphan", lazy="selectin"
     )
+    claims: Mapped[List["WarrantyClaim"]] = relationship(
+        "WarrantyClaim", back_populates="record", cascade="all, delete-orphan", lazy="selectin"
+    )
 
 
 class ReceiptItem(Base):
@@ -60,3 +76,38 @@ class ReceiptItem(Base):
     category: Mapped[Optional[str]] = mapped_column(String(100), default="General", nullable=True)
 
     record: Mapped["PurchaseRecord"] = relationship("PurchaseRecord", back_populates="items")
+
+
+class WarrantyClaim(Base):
+    __tablename__ = "warranty_claims"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    record_id: Mapped[int] = mapped_column(Integer, ForeignKey("purchase_records.id", ondelete="CASCADE"), nullable=False)
+    claim_number: Mapped[str] = mapped_column(String(50), unique=True, index=True, nullable=False)
+    title: Mapped[str] = mapped_column(String(255), nullable=False)
+    issue_description: Mapped[str] = mapped_column(Text, nullable=False)
+    desired_resolution: Mapped[str] = mapped_column(String(100), default="Repair", nullable=False)  # Repair, Replacement, Refund
+    status: Mapped[str] = mapped_column(String(50), default="IN_REVIEW", nullable=False)  # DRAFT, SUBMITTED, IN_REVIEW, APPROVED, REJECTED
+    filing_date: Mapped[str] = mapped_column(String(10), nullable=False)  # YYYY-MM-DD
+    claim_letter_body: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    tracking_number: Mapped[Optional[str]] = mapped_column(String(100), nullable=True)
+    repair_cost_claimed: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utc_now, nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=utc_now, onupdate=utc_now, nullable=False
+    )
+
+    record: Mapped["PurchaseRecord"] = relationship("PurchaseRecord", back_populates="claims")
+
+
+class NotificationItem(Base):
+    __tablename__ = "notifications"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    type: Mapped[str] = mapped_column(String(50), default="SYSTEM", nullable=False)  # EXPIRING_WARRANTY, EXPIRING_RETURN, CLAIM_UPDATE, SYSTEM
+    severity: Mapped[str] = mapped_column(String(20), default="info", nullable=False)  # urgent, warning, info
+    title: Mapped[str] = mapped_column(String(255), nullable=False)
+    message: Mapped[str] = mapped_column(Text, nullable=False)
+    record_id: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    read: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utc_now, nullable=False)

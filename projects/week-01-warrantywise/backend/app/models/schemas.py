@@ -18,6 +18,14 @@ class ReturnStatusEnum(str, Enum):
     NO_RETURN = "NO_RETURN"
 
 
+class ClaimStatusEnum(str, Enum):
+    DRAFT = "DRAFT"
+    SUBMITTED = "SUBMITTED"
+    IN_REVIEW = "IN_REVIEW"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+
+
 class LineItemSchema(BaseModel):
     name: str = Field(..., description="Name or description of the purchased item")
     quantity: int = Field(default=1, ge=1)
@@ -185,3 +193,161 @@ class DashboardStats(BaseModel):
     expiring_soon_returns: int
     expired_returns: int
     total_spend_by_currency: Dict[str, float]
+
+
+# --- Enterprise User & Auth Schemas ---
+
+class UserSignup(BaseModel):
+    email: str
+    password: str = Field(..., min_length=6)
+    full_name: str
+    organization_name: str = "Enterprise Vault"
+
+
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
+
+class DemoLoginRequest(BaseModel):
+    role: str = "admin"  # admin | consumer
+
+
+class UserResponse(BaseModel):
+    id: int
+    email: str
+    full_name: str
+    organization_name: str
+    role: str
+    api_key: Optional[str] = None
+    created_at: str
+
+    model_config = {"from_attributes": True}
+
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    user: UserResponse
+
+
+class ApiKeyResponse(BaseModel):
+    api_key: str
+    message: str
+
+
+# --- Warranty Claim Schemas ---
+
+class WarrantyClaimCreate(BaseModel):
+    record_id: int
+    title: str
+    issue_description: str
+    desired_resolution: str = "Repair"  # Repair, Replacement, Refund
+    repair_cost_claimed: Optional[float] = None
+    status: ClaimStatusEnum = ClaimStatusEnum.SUBMITTED
+
+
+class WarrantyClaimUpdate(BaseModel):
+    title: Optional[str] = None
+    issue_description: Optional[str] = None
+    desired_resolution: Optional[str] = None
+    status: Optional[ClaimStatusEnum] = None
+    tracking_number: Optional[Optional[str]] = None
+    repair_cost_claimed: Optional[float] = None
+    claim_letter_body: Optional[str] = None
+
+
+class WarrantyClaimResponse(BaseModel):
+    id: int
+    record_id: int
+    claim_number: str
+    title: str
+    issue_description: str
+    desired_resolution: str
+    status: ClaimStatusEnum
+    filing_date: str
+    claim_letter_body: Optional[str] = None
+    tracking_number: Optional[str] = None
+    repair_cost_claimed: Optional[float] = None
+    created_at: str
+    updated_at: str
+
+    # Associated record details for UI convenience
+    merchant_name: Optional[str] = None
+    product_name: Optional[str] = None
+    purchase_date: Optional[str] = None
+    warranty_end_date: Optional[str] = None
+
+    model_config = {"from_attributes": True}
+
+
+class GenerateClaimLetterRequest(BaseModel):
+    record_id: int
+    issue_description: str
+    desired_resolution: str = "Repair"
+    user_name: Optional[str] = None
+    user_contact: Optional[str] = None
+
+
+class ClaimLetterResponse(BaseModel):
+    letter_body: str
+    claim_number: str
+    statutory_citations: List[str]
+    subject: str
+
+
+# --- Notification Schemas ---
+
+class NotificationResponse(BaseModel):
+    id: int
+    type: str
+    severity: str
+    title: str
+    message: str
+    record_id: Optional[int] = None
+    read: bool
+    created_at: str
+
+    model_config = {"from_attributes": True}
+
+
+class NotificationCreate(BaseModel):
+    type: str = "SYSTEM"
+    severity: str = "info"
+    title: str
+    message: str
+    record_id: Optional[int] = None
+
+
+# --- Advanced Analytics Schemas ---
+
+class CategorySpendItem(BaseModel):
+    category: str
+    total_amount: float
+    percentage: float
+    item_count: int
+
+
+class ExpirationTimelineItem(BaseModel):
+    period: str  # e.g. "Next 30 Days", "31-60 Days", "Q3 2026", "2027+"
+    count: int
+    total_insured_value: float
+
+
+class VendorReliabilityItem(BaseModel):
+    vendor: str
+    records_count: int
+    active_warranties: int
+    claims_filed: int
+    reliability_score: float  # 0 to 100
+
+
+class AnalyticsSummaryResponse(BaseModel):
+    total_portfolio_value: float
+    capital_at_risk: float  # Value of items expiring in < 60 days
+    total_active_warranties: int
+    total_claims_active: int
+    claims_settlement_rate: float
+    category_distribution: List[CategorySpendItem]
+    expiration_timeline: List[ExpirationTimelineItem]
+    vendor_reliability: List[VendorReliabilityItem]
